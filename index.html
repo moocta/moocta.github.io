@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>MOOCTA – Mathematical Optimization and Optimal Control Theory and Applications</title>
-  <style>
-   /* Second-level dropdown */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOOCTA</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+}
+
+header {
+  background:#0b3d91;
+  color:#fff;
+  padding: 20px 40px;
+}
+
+header h1 { margin: 0; }
+
+/* NAVIGATION */
+nav {
+  background:#102a43;
+}
+
+.nav-wrap {
+  display: flex;
+  padding: 0 30px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 12px 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background:#0b3d91;
+}
+
+/* First dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  background:#0f2233;
+  min-width: 200px;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+/* Second dropdown */
 .nav-sub-item {
   position: relative;
 }
@@ -13,25 +66,22 @@
 .sub-dropdown {
   display: none;
   position: absolute;
-  left: 220px;
+  left: 200px;
   top: 0;
+  background:#0f2233;
   min-width: 200px;
-  background: #0f2233;
-  border-radius: 10px;
-  padding: 8px 0;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
 
 .nav-sub-item:hover .sub-dropdown {
   display: block;
 }
 
-.sub-dropdown a {
-  display: block;
-  padding: 10px 14px;
+main {
+  padding: 40px;
 }
-  </style>
+</style>
 </head>
+
 <body>
 
 <header>
@@ -41,84 +91,57 @@
 
 <nav>
   <div class="nav-wrap">
-    <div class="nav-item"><a href="index.html">Home</a></div>
-    <div class="nav-item"><a href="about.html">About</a></div>
-    <div class="nav-item"><a href="members.html">Members</a></div>
 
     <div class="nav-item">
-  <button type="button">Activities ▾</button>
+      <a href="index.html">Home</a>
+    </div>
 
-  <div class="dropdown">
+    <div class="nav-item">
+      <a href="about.html">About</a>
+    </div>
 
-    <!-- Workshop with second dropdown -->
-    <div class="nav-sub-item">
-      <a href="#">Workshop ▸</a>
+    <div class="nav-item">
+      <a href="members.html">Members</a>
+    </div>
 
-      <div class="sub-dropdown">
-        <a href="activities/workshop2026.html">Workshop 2026</a>
+    <div class="nav-item">
+      <a href="#">Activities ▾</a>
+
+      <div class="dropdown">
+
+        <div class="nav-sub-item">
+          <a href="#">Workshop ▸</a>
+
+          <div class="sub-dropdown">
+            <a href="activities/workshop2026.html">Workshop 2026</a>
+          </div>
+        </div>
+
+        <a href="activities/research.html">Research</a>
+        <a href="activities/seminars.html">Seminars</a>
+        <a href="activities/retreats.html">Retreats</a>
+        <a href="activities/projects.html">Projects</a>
+
       </div>
     </div>
 
-    <a href="activities/research.html">Research</a>
-    <a href="activities/seminars.html">Seminars</a>
-    <a href="activities/retreats.html">Retreats</a>
-    <a href="activities/projects.html">Projects</a>
+    <div class="nav-item">
+      <a href="news.html">News</a>
+    </div>
 
-  </div>
-</div>
+    <div class="nav-item">
+      <a href="contact.html">Contact</a>
+    </div>
 
-    <div class="nav-item"><a href="news.html">News</a></div>
-    <div class="nav-item"><a href="contact.html">Contact</a></div>
   </div>
 </nav>
 
 <main>
-  <div class="card">
-    <h2>Welcome</h2>
-    <p>
-      MOOCTA advances mathematical optimization and optimal control theory, with applications to
-      logistics infrastructure, financial inclusion, and environmental systems.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>What we do</h2>
-    <ul>
-      <li>Workshops and research schools (talks recorded and archived in the portal). :contentReference[oaicite:4]{index=4}</li>
-      <li>Face-to-face meetings and planning retreats. :contentReference[oaicite:5]{index=5}</li>
-      <li>Open research portal + GitHub organisation for notes, datasets, and seminar archives. :contentReference[oaicite:6]{index=6}</li>
-      <li>Regular online seminar series and rotating workshops/schools. :contentReference[oaicite:7]{index=7}</li>
-    </ul>
-  </div>
+  <h2>Welcome</h2>
+  <p>
+    MOOCTA advances mathematical optimization and optimal control theory.
+  </p>
 </main>
-
-<footer>
-  © 2026 MOOCTA | Hosted on GitHub Pages
-</footer>
-
-<script>
-  // Mobile dropdown toggle (desktop uses hover)
-  const btn = document.getElementById('activitiesBtn');
-  const menu = document.getElementById('activitiesMenu');
-
-  function isMobile() {
-    return window.matchMedia("(max-width: 820px)").matches;
-  }
-
-  btn.addEventListener('click', () => {
-    if (!isMobile()) return;
-    const open = menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!isMobile()) return;
-    if (!menu.contains(e.target) && e.target !== btn) {
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-</script>
 
 </body>
 </html>
