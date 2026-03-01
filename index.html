@@ -106,6 +106,55 @@ main {
   object-fit: contain; /* shows the FULL logo */
 }
 
+ @media (max-width: 768px) {
+
+  /* Stack navigation vertically */
+  .nav-wrap {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  nav a {
+    padding: 12px 20px;
+    border-top: 1px solid #1f3b57;
+  }
+
+  /* Make dropdowns flow normally on mobile */
+  .dropdown,
+  .sub-dropdown {
+    position: static;
+    display: block;
+    min-width: 100%;
+  }
+
+  /* Remove hover dependency (hover doesn't work well on phones) */
+  .nav-item:hover .dropdown,
+  .nav-sub-item:hover .sub-dropdown {
+    display: block;
+  }
+
+  /* Reduce main padding */
+  main {
+    padding: 20px;
+  }
+
+  /* Center header content */
+  header {
+    text-align: center;
+    padding: 15px;
+  }
+
+  /* Resize logo for mobile */
+  .logo {
+    height: 90px;
+    margin: 0 auto;
+  }
+
+}
  
 </style>
 </head>
