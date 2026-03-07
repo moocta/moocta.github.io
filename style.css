@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #e9f1fb;
+  padding: 10px 30px;
+  border-bottom: 1px solid #d0e0f5;
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* NAVIGATION */
+nav {
+  background: #102a43;
+}
+
+.nav-wrap {
+  display: flex;
+  padding: 0 30px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 12px 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: #0b3d91;
+}
+
+/* First dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  background: #0f2233;
+  min-width: 200px;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+/* Second dropdown */
+.nav-sub-item {
+  position: relative;
+}
+
+.sub-dropdown {
+  display: none;
+  position: absolute;
+  left: 200px;
+  top: 0;
+  background: #0f2233;
+  min-width: 200px;
+}
+
+.nav-sub-item:hover .sub-dropdown {
+  display: block;
+}
+
+main {
+  padding: 40px;
+  flex: 1;
+}
+
+footer {
+  background: #102a43;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  /* Stack navigation vertically */
+  .nav-wrap {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  nav a {
+    padding: 12px 20px;
+    border-top: 1px solid #1f3b57;
+  }
+
+  /* Make dropdowns flow normally on mobile */
+  .dropdown, .sub-dropdown {
+    position: static;
+    display: block;
+    min-width: 100%;
+  }
+
+  /* Remove hover dependency (hover doesn't work well on phones) */
+  .nav-item:hover .dropdown, .nav-sub-item:hover .sub-dropdown {
+    display: block;
+  }
+
+  /* Reduce main padding */
+  main {
+    padding: 20px;
+  }
+
+  /* Center header content */
+  header {
+    text-align: center;
+    padding: 15px;
+  }
+
+  /* Resize logo for mobile */
+  .logo {
+    height: 90px;
+    margin: 0 auto;
+  }
+}

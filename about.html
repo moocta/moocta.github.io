@@ -2,60 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About | MOOCTA</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f5f7fa;
-      color: #222;
-    }
-    header {
-      background-color: #0b3d91;
-      color: white;
-      padding: 20px 40px;
-    }
-    nav {
-      background-color: #102a43;
-      padding: 10px 40px;
-    }
-    nav a {
-      color: white;
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    footer {
-      background-color: #102a43;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  
-  
- <header>
+<header class="site-header">
+  <img src="images/Logo.jpeg" alt="MOOCTA Logo" class="logo">
   <p>Mathematical Optimization and Optimal Control Theory and Applications</p>
 </header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="members.html">Members</a>
-  <a href="news.html">News</a>
-  <a href="contact.html">Contact</a>
+  <div class="nav-wrap">
+
+    <div class="nav-item">
+      <a href="index.html">Home</a>
+    </div>
+
+    <div class="nav-item">
+      <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-item">
+      <a href="members.html">Members</a>
+    </div>
+
+    <div class="nav-item">
+      <a href="#">Activities ▾</a>
+
+      <div class="dropdown">
+
+        <div class="nav-sub-item">
+          <a href="#">Workshop ▸</a>
+
+          <div class="sub-dropdown">
+            <a href="activities/workshop/workshop2026.html">Workshop 2026</a>
+          </div>
+        </div>
+
+        <a href="activities/research.html">Research</a>
+        <a href="activities/seminars.html">Seminars</a>
+        <a href="activities/retreats.html">Retreats</a>
+        <a href="activities/projects.html">Projects</a>
+
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a href="news.html">News</a>
+    </div>
+
+    <div class="nav-item">
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
 </nav>
 
-<section>
+<main>
   <h2>About the Research Group</h2>
   <p>
     The MOOCTA Research Group advances mathematical optimization 
@@ -67,7 +72,7 @@
     Our activities include workshops, seminars, retreats, and 
     collaborative research projects.
   </p>
-</section>
+</main>
 
 <footer>
   © 2025 MOOCTA Research Group
