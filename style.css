@@ -214,11 +214,19 @@ footer {
   /* Make dropdowns flow normally on mobile */
   .dropdown, .sub-dropdown {
     position: static;
-    display: block;
+    display: none;
     min-width: 100%;
   }
 
-  /* Remove hover dependency (hover doesn't work well on phones) */
+  /* Indent sub-menus to differentiate them on mobile */
+  .dropdown a {
+    padding-left: 40px;
+  }
+  .sub-dropdown a {
+    padding-left: 60px;
+  }
+
+  /* Show dropdowns when tapped (acts as hover on most mobile browsers) */
   .nav-item:hover .dropdown, .nav-sub-item:hover .sub-dropdown {
     display: block;
   }
