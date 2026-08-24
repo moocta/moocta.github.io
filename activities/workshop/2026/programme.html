@@ -4,30 +4,193 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programme - Workshop 2026 | MOOCTA</title>
+  <meta name="description" content="Full programme for the MOOCTA workshop on Mathematical Optimization and Control for Industrial and Societal Challenges in Sub-Saharan Africa, 7-10 September 2026, Manhattan Hotel, Pretoria.">
   <link rel="stylesheet" href="../../../style.css">
   <style>
-    table {
+    /* ---- Page intro ---- */
+    .prog-header {
+      background: #f0f4f8;
+      border: 1px solid #d0e0f5;
+      border-radius: 8px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+    }
+    .prog-header h1 { margin: 0 0 10px; color: #102a43; }
+    .prog-header p.meta { font-size: 1.1em; color: #334e68; margin: 0 0 20px; }
+    .prog-header .button { margin: 0 10px 0 0; }
+    .note { font-size: 0.9em; color: #486581; font-style: italic; }
+
+    /* ---- Short course theme cards ---- */
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin: 20px 0 10px;
+    }
+    .theme-card {
+      background: #eaf2fc;
+      border: 1px solid #cfe0f5;
+      border-left: 5px solid #102a43;
+      border-radius: 6px;
+      padding: 18px 20px;
+    }
+    .theme-card .tag {
+      display: block;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #486581;
+      margin-bottom: 6px;
+    }
+    .theme-card h3 { margin: 0 0 8px; color: #102a43; font-size: 1.05em; }
+    .theme-card .lecturer { margin: 0; color: #334e68; font-style: italic; }
+
+    /* ---- Legend ---- */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      margin: 25px 0 12px;
+      font-size: 0.9em;
+      color: #334e68;
+    }
+    .legend span { display: inline-flex; align-items: center; gap: 8px; }
+    .swatch {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+    .sw-course { background: #eaf2fc; }
+    .sw-part   { background: #faeefa; }
+    .sw-ind    { background: #fdeee1; }
+    .sw-break  { background: #ddf0d6; }
+
+    /* ---- Schedule table ---- */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid #d0e0f5;
+      border-radius: 8px;
+    }
+    table.programme {
       width: 100%;
+      min-width: 900px;
       border-collapse: collapse;
-      margin: 20px 0;
+      table-layout: fixed;
       font-size: 0.95em;
     }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
+    .col-time { width: 13%; }
+    .col-day { width: 21.75%; }
+    .programme th, .programme td {
+      border: 1px solid #d7dee6;
+      padding: 10px 12px;
       text-align: left;
+      vertical-align: top;
     }
-    th {
-      background-color: #102a43;
+    .programme thead th {
+      background: #102a43;
       color: white;
+      font-size: 0.95em;
+      white-space: nowrap;
     }
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
+    .programme thead th span {
+      display: block;
+      font-weight: normal;
+      font-size: 0.85em;
+      color: #bcccdc;
     }
-    .break {
-      background-color: #e9f1fb;
+    .programme td.time {
+      white-space: nowrap;
       font-weight: bold;
+      color: #334e68;
+      background: #f7fafc;
+    }
+
+    /* Session band rows */
+    .band td {
       text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85em;
+      color: #102a43;
+    }
+    .band-course td { background: #cfe0f5; }
+    .band-part   td { background: #ecd6ec; }
+    .band-ind    td { background: #f8d7bd; }
+
+    /* Session chair rows */
+    .chair td {
+      background: #f1f5f9;
+      font-size: 0.88em;
+      color: #486581;
+      white-space: nowrap;
+    }
+    .chair td.chair-label {
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: bold;
+      background: #e6ecf2;
+    }
+
+    /* Category cells */
+    .c-course { background: #eaf2fc; }
+    .c-part   { background: #faeefa; }
+    .c-ind    { background: #fdeee1; }
+
+    /* Breaks, meals and social programme */
+    .break td {
+      background: #ddf0d6;
+      text-align: center;
+      font-weight: bold;
+      color: #1d4d2b;
+    }
+    .break td.time { text-align: left; color: #334e68; }
+    .social td { background: #ddf0d6; color: #1d4d2b; font-weight: bold; }
+    .social td.time { color: #334e68; }
+
+    /* Cell contents */
+    .label { display: block; font-weight: bold; color: #102a43; }
+    .speaker { display: block; margin-top: 6px; color: #334e68; font-style: italic; }
+    .slot + .slot {
+      border-top: 1px dashed #b9cbe0;
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+    .slot-time {
+      display: block;
+      font-size: 0.85em;
+      color: #486581;
+      margin-bottom: 3px;
+    }
+
+    /* ---- Embedded PDF ---- */
+    details.pdf-view {
+      margin-top: 30px;
+      border: 1px solid #d0e0f5;
+      border-radius: 8px;
+      background: #f0f4f8;
+      padding: 15px 20px;
+    }
+    details.pdf-view summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #102a43;
+    }
+    details.pdf-view object {
+      margin-top: 15px;
+      border: 1px solid #d0e0f5;
+      border-radius: 4px;
+    }
+
+    .scroll-hint { display: none; }
+
+    @media (max-width: 768px) {
+      .prog-header { padding: 20px; }
+      .prog-header .button { display: block; margin: 0 0 10px; text-align: center; }
+      .scroll-hint { display: block; }
     }
   </style>
 </head>
@@ -68,138 +231,262 @@
 </nav>
 
 <main>
-<h1>Preliminary Programme</h1>
 
-<h2>Short Course Topics</h2>
-<ul>
-  <li><strong>Topic 1:</strong> Foundations of Combinatorial Optimization & Metaheuristics</li>
-  <li><strong>Topic 2:</strong> Stochastic Control Theory</li>
-  <li><strong>Topic 3:</strong> PDE-Constrained Optimization</li>
-</ul>
+<div class="prog-header">
+  <h1>Workshop Programme</h1>
+  <p class="meta"><strong>7 &ndash; 10 September 2026</strong> &nbsp;|&nbsp; The Manhattan Hotel, Pretoria, South Africa</p>
+  <a class="button" href="../../../Programme.pdf" download="MOOCTA_Workshop_2026_Programme.pdf">Download Programme (PDF)</a>
+  <a class="button" href="participants.html">Participants</a>
+  <p class="note" style="margin-top: 18px; margin-bottom: 0;">All times are South African Standard Time (SAST, UTC+2). The programme is subject to change.</p>
+</div>
 
-<h2>Schedule</h2>
-<p><em>The detailed programme schedule is currently being finalized and will be published here soon.</em></p>
+<!-- <section>
+  <h2>Short Course Themes</h2>
+  <p>Each morning of the workshop opens with a short course session delivered by an invited lecturer.</p>
+  <div class="theme-grid">
+    <div class="theme-card">
+      <span class="tag">Theme 1 &middot; Tuesday</span>
+      <h3>Combinatorial Optimization</h3>
+      <p class="lecturer">Prof J. Grobler</p>
+    </div>
+    <div class="theme-card">
+      <span class="tag">Theme 2 &middot; Wednesday</span>
+      <h3>Stochastic Control Theory</h3>
+      <p class="lecturer">Prof O. Pamen</p>
+    </div>
+    <div class="theme-card">
+      <span class="tag">Theme 3 &middot; Thursday</span>
+      <h3>PDE-Constrained Optimization</h3>
+      <p class="lecturer">Prof S. Migorski</p>
+    </div>
+  </div>
+</section> -->
 
-<!--
-<table>
-  <thead>
-    <tr>
-      <th>Time</th>
-      <th>Monday</th>
-      <th>Tuesday</th>
-      <th>Wednesday</th>
-      <th>Thursday</th>
-      <th>Friday</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>08:30 – 09:00</td>
-      <td>Registration</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>09:00 – 09:45</td>
-      <td>Topic 1</td>
-      <td>Topic 3</td>
-      <td>Topic 2</td>
-      <td>Topic 1</td>
-      <td>Topic 3</td>
-    </tr>
-    <tr>
-      <td>09:45 – 10:30</td>
-      <td>Topic 2</td>
-      <td>Topic 1</td>
-      <td>Topic 3</td>
-      <td>Topic 2</td>
-      <td>Talk 5</td>
-    </tr>
-    <tr class="break">
-      <td>10:30 – 11:00</td>
-      <td colspan="6">Tea Break</td>
-    </tr>
-    <tr>
-      <td>11:00 – 11:30</td>
-      <td>Talk 1</td>
-      <td>Talk 5</td>
-      <td>Talk 9</td>
-      <td>Talk 13</td>
-      <td>Talk 17</td>
-    </tr>
-    <tr>
-      <td>11:30 – 12:00</td>
-      <td>Talk 2</td>
-      <td>Talk 6</td>
-      <td>Talk 10</td>
-      <td>Talk 14</td>
-      <td>Talk 18</td>
-    </tr>
-    <tr>
-      <td>12:00 – 12:30</td>
-      <td>Talk 3</td>
-      <td>Talk 7</td>
-      <td>Talk 11</td>
-      <td>Talk 15</td>
-      <td>Talk 19</td>
-    </tr>
-    <tr>
-      <td>12:30 – 13:00</td>
-      <td>Talk 4</td>
-      <td>Talk 8</td>
-      <td>Talk 12</td>
-      <td>Talk 16</td>
-      <td>Talk 20</td>
-    </tr>
-    <tr>
-      <td>13:00 – 14:00</td>
-      <td colspan="6" class="break">Lunch</td>
-    </tr>
-    <tr>
-      <td>14:00 – 14:45</td>
-      <td>Plenary Talk 1</td>
-      <td>Plenary Talk 2</td>
-      <td>Plenary Talk 3</td>
-      <td>Plenary Talk 4</td>
-      <td>Keynote Talk</td>
-    </tr>
-    <tr>
-      <td>15:00 – 15:30</td>
-      <td>Industry 1</td>
-      <td>Industry 3</td>
-      <td>Industry 2</td>
-      <td>Panel</td>
-      <td>Closing Ceremony</td>
-    </tr>
-    <tr>
-      <td>15:30 – 16:00</td>
-      <td>Industry 2</td>
-      <td>Industry 1</td>
-      <td>Industry 3</td>
-      <td>Panel</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>16:00 – 17:00</td>
-      <td>Discussion</td>
-      <td>Discussion</td>
-      <td>Discussion</td>
-      <td>Discussion</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>18:00 – 20:00</td>
-      <td></td>
-      <td>Poster Session</td>
-      <td>Socials</td>
-      <td>Conference Dinner</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
--->
+<section>
+  <h2>Schedule</h2>
+
+  <div class="legend">
+    <span><i class="swatch sw-course"></i> Short course, keynote &amp; plenary talks</span>
+    <span><i class="swatch sw-part"></i> Participants' talks</span>
+    <span><i class="swatch sw-ind"></i> Industry talks</span>
+    <span><i class="swatch sw-break"></i> Breaks, meals &amp; social programme</span>
+  </div>
+  <p class="note scroll-hint">Scroll the table sideways to view all four days.</p>
+
+  <div class="table-scroll">
+    <table class="programme">
+      <colgroup>
+        <col class="col-time">
+        <col span="4" class="col-day">
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Monday <span>07/09/2026</span></th>
+          <th scope="col">Tuesday <span>08/09/2026</span></th>
+          <th scope="col">Wednesday <span>09/09/2026</span></th>
+          <th scope="col">Thursday <span>10/09/2026</span></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="band band-course"><td colspan="5">Short Course</td></tr>
+
+        <tr class="chair">
+          <td class="chair-label">Chair</td>
+          <td>Chinedu</td>
+          <td>Georgina</td>
+          <td>Nouralden</td>
+          <td>Chinedu</td>
+        </tr>
+
+        <tr>
+          <td class="time">08:30 &ndash; 10:30</td>
+          <td class="c-course">
+            <div class="slot">
+              <span class="slot-time">08:30 &ndash; 09:30</span>
+              <span class="label">Registration</span>
+            </div>
+            <div class="slot">
+              <span class="slot-time">09:30 &ndash; 09:45</span>
+              <span class="label">Opening Remarks</span>
+              <span class="speaker">Prof L. Nonqxa</span>
+            </div>
+            <div class="slot">
+              <span class="slot-time">09:45 &ndash; 10:30</span>
+              <span class="label">Keynote Talk</span>
+              <span class="speaker">Prof S. Moshokoa</span>
+            </div>
+          </td>
+          <td class="c-course">
+            <span class="label">Theme 1: Combinatorial Optimization</span>
+            <span class="speaker">Prof J. Grobler</span>
+          </td>
+          <td class="c-course">
+            <span class="label">Theme 2: Stochastic Control Theory</span>
+            <span class="speaker">Prof O. Pamen</span>
+          </td>
+          <td class="c-course">
+            <span class="label">Theme 3: PDE-Constrained Optimization</span>
+            <span class="speaker">Prof S. Migorski</span>
+          </td>
+        </tr>
+
+        <tr class="break">
+          <td class="time">10:30 &ndash; 11:00</td>
+          <td colspan="4">Break</td>
+        </tr>
+
+        <tr class="band band-part"><td colspan="5">Participants' Talks</td></tr>
+
+        <tr class="chair">
+          <td class="chair-label">Chair</td>
+          <td>Abass</td>
+          <td>Maggie</td>
+          <td>Georgina</td>
+          <td>Nouralden</td>
+        </tr>
+
+        <tr>
+          <td class="time">11:00 &ndash; 11:30</td>
+          <td class="c-part">Chibueze Okeke</td>
+          <td class="c-part">Talat Nazir</td>
+          <td class="c-part">Zakaria Ali</td>
+          <td class="c-part">Winfrida Nwigilwa</td>
+        </tr>
+
+        <tr>
+          <td class="time">11:30 &ndash; 11:55</td>
+          <td class="c-part">Chidi Nwakpa</td>
+          <td class="c-part">Mohamed Elfadul</td>
+          <td class="c-part">Ciara Losel</td>
+          <td class="c-part">Keneth Motjeane</td>
+        </tr>
+
+        <tr class="break">
+          <td class="time">11:55 &ndash; 12:00</td>
+          <td colspan="4">Comfort Break</td>
+        </tr>
+
+        <tr>
+          <td class="time">12:00 &ndash; 12:25</td>
+          <td class="c-part">Professor Ndlovu</td>
+          <td class="c-part">Nneka Umeorah</td>
+          <td class="c-part">Bernard Adjei</td>
+          <td class="c-part">Francis Nwawuru</td>
+        </tr>
+
+        <tr>
+          <td class="time">12:25 &ndash; 12:50</td>
+          <td class="c-part">Koketso Malebana</td>
+          <td class="c-part">Anesu Pisira</td>
+          <td class="c-part">Jean Menjanahary</td>
+          <td class="c-part">Ndapandula Hamupolo</td>
+        </tr>
+
+        <tr>
+          <td class="time">12:50 &ndash; 13:15</td>
+          <td class="c-part">Kazeem Aremu</td>
+          <td class="c-part">Maryam Iqbal</td>
+          <td class="c-part">Ali Haroon</td>
+          <td class="c-part">Timothy Bisakaya</td>
+        </tr>
+
+        <tr class="break">
+          <td class="time">13:15 &ndash; 14:15</td>
+          <td colspan="4">Lunch</td>
+        </tr>
+
+        <tr class="band band-course"><td colspan="5">Plenary Talks</td></tr>
+
+        <tr class="chair">
+          <td class="chair-label">Chair</td>
+          <td>Abass</td>
+          <td>Maggie</td>
+          <td>Georgina</td>
+          <td>Nouralden</td>
+        </tr>
+
+        <tr>
+          <td class="time">14:15 &ndash; 15:00</td>
+          <td class="c-course">
+            <span class="label">Talk 1</span>
+            <span class="speaker">Prof M. Banda</span>
+          </td>
+          <td class="c-course">
+            <span class="label">Talk 3</span>
+            <span class="speaker">Prof S. Migorski</span>
+          </td>
+          <td class="c-course">
+            <span class="label">Talk 4</span>
+            <span class="speaker">Prof J. Grobler</span>
+          </td>
+          <td class="c-course">
+            <span class="label">Talk 5</span>
+            <span class="speaker">Prof O. Pamen</span>
+          </td>
+        </tr>
+
+        <tr class="break">
+          <td class="time">15:00 &ndash; 15:15</td>
+          <td colspan="4">Break</td>
+        </tr>
+
+        <tr class="band band-ind"><td colspan="5">Industry Talks</td></tr>
+
+        <tr class="chair">
+          <td class="chair-label">Chair</td>
+          <td>Matthews</td>
+          <td>Matthews</td>
+          <td>Matthews</td>
+          <td>Maggie</td>
+        </tr>
+
+        <tr>
+          <td class="time">15:15 &ndash; 16:15</td>
+          <td class="c-ind">
+            <span class="label">Talk 2</span>
+            <span class="speaker">Dr L. Jolaoso</span>
+          </td>
+          <td class="c-ind">
+            <span class="label">Industry 1</span>
+            <span class="speaker">DANCE</span>
+          </td>
+          <td class="c-ind">
+            <span class="label">Industry 2</span>
+            <span class="speaker">Isazi</span>
+          </td>
+          <td><span class="label">Closing</span></td>
+        </tr>
+
+        <tr>
+          <td class="time">16:15 &ndash; 17:00</td>
+          <td>Discussion</td>
+          <td>Discussion</td>
+          <td>Discussion</td>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr class="social">
+          <td class="time">18:00 &ndash; 22:00</td>
+          <td>&nbsp;</td>
+          <td>Cocktail &amp; Poster Session</td>
+          <td>Workshop Dinner</td>
+          <td>&nbsp;</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <details class="pdf-view">
+    <summary>View the printable PDF version</summary>
+    <object data="../../../Programme.pdf" type="application/pdf" width="100%" height="800px">
+      <p>Your browser does not support embedded PDFs. You can
+        <a href="../../../Programme.pdf" download="MOOCTA_Workshop_2026_Programme.pdf">download the programme here</a>.</p>
+    </object>
+  </details>
+</section>
 
 </main>
 
