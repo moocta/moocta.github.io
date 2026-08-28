@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abstracts - Workshop 2026 | MOOCTA</title>
+  <meta name="description" content="Titles, abstracts and speaker biographies for the MOOCTA 2026 workshop: keynote, short courses, plenary lectures, industry talks, contributed talks and posters.">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="icon" type="image/png" href="../../../images/Logo.png">
+  <style>
+    /* ---- Page intro ---- */
+    .page-header {
+      background: #f0f4f8;
+      border: 1px solid #d0e0f5;
+      border-radius: 8px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+    }
+    .page-header h1 { margin: 0 0 10px; color: #102a43; }
+    .page-header p.meta { font-size: 1.05em; color: #334e68; margin: 0 0 20px; }
+    .page-header .button { margin: 0 10px 0 0; }
+    .note { font-size: 0.9em; color: #486581; font-style: italic; }
+
+    /* ---- Contents ---- */
+    .toc {
+      border: 1px solid #d0e0f5;
+      border-radius: 8px;
+      padding: 20px 25px;
+      margin-bottom: 40px;
+    }
+    .toc h2 { margin: 0 0 15px; font-size: 1.15em; color: #102a43; }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px 30px;
+    }
+    .toc h3 {
+      margin: 0 0 8px;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #486581;
+    }
+    .toc ul { margin: 0; padding-left: 18px; }
+    .toc li { margin-bottom: 4px; font-size: 0.95em; }
+
+    /* ---- Sessions ---- */
+    .session { margin-bottom: 45px; }
+    .session > h2 {
+      color: #102a43;
+      border-bottom: 2px solid #102a43;
+      padding-bottom: 6px;
+      margin-bottom: 5px;
+      scroll-margin-top: 70px;
+    }
+    .session > p.session-intro { color: #486581; font-size: 0.95em; margin-top: 8px; }
+
+    /* ---- Abstract entries ---- */
+    .abstract {
+      border: 1px solid #dbe4ee;
+      border-left: 5px solid #102a43;
+      border-radius: 6px;
+      padding: 20px 25px;
+      margin: 22px 0;
+      scroll-margin-top: 70px;
+    }
+    .abstract:target {
+      background: #f4f9ff;
+      border-color: #9dc0e6;
+      border-left-color: #0b3d91;
+    }
+    .abstract h3 { margin: 0 0 10px; color: #102a43; font-size: 1.12em; line-height: 1.35; }
+    .byline { margin: 0 0 4px; font-weight: bold; color: #243b53; }
+    .byline .affil { font-weight: normal; font-style: italic; color: #486581; }
+    .slot {
+      margin: 0 0 16px;
+      font-size: 0.82em;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #627d98;
+    }
+    .abstract p { line-height: 1.6; }
+    .abstract p.math {
+      text-align: center;
+      font-style: italic;
+      margin: 18px 0;
+      color: #243b53;
+    }
+    .joint { font-size: 0.92em; color: #486581; font-style: italic; }
+    .keywords { font-size: 0.92em; color: #486581; }
+    .refs { font-size: 0.9em; color: #486581; }
+    .refs ol { padding-left: 20px; margin: 6px 0 0; }
+    .refs li { margin-bottom: 4px; }
+
+    details.bio {
+      margin-top: 16px;
+      border-top: 1px solid #e3ebf3;
+      padding-top: 12px;
+    }
+    details.bio summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #102a43;
+      font-size: 0.95em;
+    }
+    details.bio p { font-size: 0.95em; }
+
+    /* Session colour accents, matching the programme legend */
+    .s-invited .abstract { border-left-color: #102a43; }
+    .s-industry .abstract { border-left-color: #c4703a; }
+    .s-contributed .abstract { border-left-color: #8e5f92; }
+    .s-poster .abstract { border-left-color: #4a8c5a; }
+
+    .back-to-top {
+      display: block;
+      text-align: right;
+      font-size: 0.85em;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .page-header { padding: 20px; }
+      .page-header .button { display: block; margin: 0 0 10px; text-align: center; }
+      .abstract { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <img src="../../../images/Logo.png" alt="MOOCTA Logo" class="logo">
+  <p>Mathematical Optimization and Optimal Control Theory and Applications (MOOCTA)</p>
+</header>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="nav-item"><a href="../../../index.html">Home</a></div>
+    <div class="nav-item"><a href="../../../about.html">About</a></div>
+    <div class="nav-item"><a href="../../../members.html">Members</a></div>
+    <div class="nav-item">
+      <a href="#">Activities ▾</a>
+      <div class="dropdown">
+        <div class="nav-sub-item">
+          <a href="../workshop2026.html">Workshop 2026 ▸</a>
+          <div class="sub-dropdown">
+            <a href="../workshop2026.html">Overview</a>
+            <a href="programme.html">Programme</a>
+            <a href="abstracts.html">Abstracts</a>
+            <a href="participants.html">Participants</a>
+            <a href="venue.html">Venue</a>
+          </div>
+        </div>
+        <a href="../../research.html">Research</a>
+        <a href="../../seminars.html">Seminars</a>
+        <a href="../../retreats.html">Retreats</a>
+        <a href="../../projects.html">Projects</a>
+      </div>
+    </div>
+    <div class="nav-item"><a href="../../../news.html">News</a></div>
+    <div class="nav-item"><a href="../../../contact.html">Contact</a></div>
+  </div>
+</nav>
+
+<main>
+
+<div class="page-header" id="top">
+  <h1>Abstracts</h1>
+  <p class="meta">Titles, abstracts and speaker biographies for every session of the workshop, 7 &ndash; 10 September 2026.</p>
+  <a class="button" href="programme.html">Back to Programme</a>
+  <a class="button" href="../../../MOOCTA-2026-Booklet.pdf" download="MOOCTA_2026_Workshop_Booklet.pdf">Workshop Booklet (PDF)</a>
+  <p class="note" style="margin-top: 18px; margin-bottom: 0;">Talks are listed in the order they appear in the programme.</p>
+</div>
+
+<section class="toc" aria-label="Contents">
+  <h2>On this page</h2>
+  <div class="toc-grid">
+    <div>
+      <h3>Opening &amp; Keynote</h3>
+      <ul>
+        <li><a href="#opening-address">Loyiso Nongxa</a></li>
+        <li><a href="#keynote-moshokoa">Seithuti Moshokoa</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Short Courses</h3>
+      <ul>
+        <li><a href="#short-course-grobler">Jacomine Grobler</a></li>
+        <li><a href="#short-course-pamen">Olivier Pamen</a></li>
+        <li><a href="#short-course-migorski">Stanisław Migórski</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Plenary Talks</h3>
+      <ul>
+        <li><a href="#plenary-banda">Mapundi Banda</a></li>
+        <li><a href="#plenary-jolaoso">Lateef Jolaoso</a></li>
+        <li><a href="#plenary-migorski">Stanisław Migórski</a></li>
+        <li><a href="#plenary-grobler">Jacomine Grobler</a></li>
+        <li><a href="#plenary-pamen">Olivier Pamen</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Industry Talks</h3>
+      <ul>
+        <li><a href="#industry-dance">DANCE</a></li>
+        <li><a href="#industry-isazi">Isazi Consulting</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contributed Talks</h3>
+      <ul>
+        <li><a href="#talk-chibueze-okeke">Chibueze Okeke</a></li>
+        <li><a href="#talk-chidi-nwakpa">Chidi Nwakpa</a></li>
+        <li><a href="#talk-professor-ndlovu">Professor Ndlovu</a></li>
+        <li><a href="#talk-koketso-malebana">Koketso Malebana</a></li>
+        <li><a href="#talk-kazeem-aremu">Kazeem Aremu</a></li>
+        <li><a href="#talk-talat-nazir">Talat Nazir</a></li>
+        <li><a href="#talk-mohamed-elfadul">Mohamed Elfadul</a></li>
+        <li><a href="#talk-nneka-umeorah">Nneka Umeorah</a></li>
+        <li><a href="#talk-anesu-pisira">Anesu Pisira</a></li>
+        <li><a href="#talk-maryam-iqbal">Maryam Iqbal</a></li>
+        <li><a href="#talk-zakaria-ali">Zakaria Ali</a></li>
+        <li><a href="#talk-ciara-losel">Ciara Losel</a></li>
+        <li><a href="#talk-bernard-adjei">Bernard Adjei</a></li>
+        <li><a href="#talk-jean-menjanahary">Jean Menjanahary</a></li>
+        <li><a href="#talk-ali-haroon">Ali Haroon</a></li>
+        <li><a href="#talk-winfrida-mwigilwa">Winfrida Mwigilwa</a></li>
+        <li><a href="#talk-keneth-motjeane">Keneth Motjeane</a></li>
+        <li><a href="#talk-francis-nwawuru">Francis Nwawuru</a></li>
+        <li><a href="#talk-ndapandula-hamupolo">Ndapandula Hamupolo</a></li>
+        <li><a href="#talk-timothy-bisakaya">Timothy Bisakaya</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Posters</h3>
+      <ul>
+        <li><a href="#poster-ernest-obini">Ernest Obini</a></li>
+        <li><a href="#poster-leah-wangu">Leah Wangu</a></li>
+        <li><a href="#poster-michael-bryant">Michael Bryant</a></li>
+        <li><a href="#poster-selina-liyengwa">Selina Liyengwa</a></li>
+        <li><a href="#poster-sephetha-ngwana">Sephetha Ngwana</a></li>
+        <li><a href="#poster-shamsudeeen-kajola">Shamsudeeen Kajola</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="session s-invited" id="opening-keynote">
+  <h2>Opening Address and Keynote Lecture</h2>
+
+  <article class="abstract" id="opening-address">
+    <h3>Opening Address</h3>
+    <p class="byline">Prof. Loyiso Nongxa <span class="affil">&middot; Emeritus Professor, University of the Witwatersrand; Honorary Professor, University of Pretoria; Extraordinary Professor, University of the Western Cape, South Africa</span></p>
+    <p class="slot">Monday 7 September &middot; 09:30 &ndash; 09:45</p>
+    <details class="bio">
+      <summary>Biography</summary>
+      <p>Professor Loyiso G. Nongxa retired as Ad Hominem Professor of Mathematics at the University of the Witwatersrand in December 2018, having spent 18 years at the university. From 2000 until 2013 he served on the Senior Executive Team of Wits University, from 2000 until 2002 as a Deputy Vice-Chancellor for Research and Vice-Principal; and from 2003 until 2013 as Vice-Chancellor and Principal. He is currently Professor Emeritus at Wits University, Honorary Professor at University of Pretoria and Extraordinary Professor at University of the Western Cape.</p>
+      <p>He attended Oxford University on a Rhodes Scholarship and obtained his doctorate in Mathematics in 1982. Prior to that he was a student at the University of Fort Hare where he completed his B.Sc.(Honours) degrees in Mathematics and Mathematical Statistics and an M.Sc. in Mathematics, both cum laude. He has taught at the National University of Lesotho (1982 &ndash; 1986), the former University of Natal in Durban (1986 &ndash; 1990), the University of the Western Cape (1990 &ndash; 2000); and the University of the Witwatersrand (2014 &ndash; 2018). Prior to moving to university management, his research interests were in Group Theory and over the last few years, his academic interests have been in the Mathematical Foundations of Data Science and Machine Learning, and History of South African Mathematics.</p>
+      <p>Professor Loyiso Nongxa was elected as one of the two Vice-Presidents of the International Mathematical Union (IMU) at the Annual General Meeting in São Paulo in 2018. The term was from 2019 to 2022 and he served as the liaison person between IMU and UNESCO, as well as with the International Science Council. He served as the Chairperson of the Board of the South African National Research Foundation (NRF) from 2014 to 2018. He was appointed by the Minister of Higher Education and Training as Administrator of the University of Fort Hare for the period April 2019 to April 2020. For the last year he has been an ambassador for South African mathematical sciences, lobbying for the creation of a national Institute for Mathematical Sciences and Applications in South Africa.</p>
+    </details>
+  </article>
+
+  <article class="abstract" id="keynote-moshokoa">
+    <h3>Ordered Best Proximity Pairs for Asymptotic Pointwise Noncyclic Contractions with Applications to Volterra and Matrix Equations</h3>
+    <p class="byline">Prof. Seithuti Moshokoa <span class="affil">&middot; Department of Mathematics and Statistics, Tshwane University of Technology, Pretoria, South Africa</span></p>
+    <p class="slot">Monday 7 September &middot; 09:45 &ndash; 10:30 &middot; Keynote Lecture</p>
+    <p>In this paper, we study best proximity pairs for new classes of ordered noncyclic mappings in uniformly convex Banach spaces. We first establish existence and convergence results for noncyclic mappings satisfying an order-dependent proximal contractive condition. We then introduce ordered proximal asymptotic pointwise noncyclic contractions and prove the existence of best proximity pairs under appropriate monotonicity, boundedness, and proximality assumptions. Strong convergence of the corresponding iterative sequences is obtained without imposing a global Banach contraction condition.</p>
+    <p>As special cases, fixed point and strong convergence results for asymptotic pointwise contractions are derived by considering coincident subsets and the trivial order. The applicability of the developed theory is illustrated through three problems: a nonlinear system of Volterra integral equations admitting a best proximity pair, a nonlinear Volterra integral equation whose associated operator is not a Banach contraction but satisfies an asymptotic contractive estimate arising from factorial decay, and a discrete Lyapunov matrix equation for which the induced operator is asymptotically pointwise contractive although it is not globally contractive. These applications show that the proposed framework extends classical contraction principles and yields convergence results for nonlinear problems beyond the scope of standard fixed point methods.</p>
+    <p class="joint">This is joint work with Prof M. Gabeleh, Department of Mathematics, Faculty of Basic Sciences, Ayatollah Boroujerdi University, Boroujerd, Iran.</p>
+    <details class="bio">
+      <summary>Biography</summary>
+      <p>Seithuti Moshokoa is a Professor and Head of Department in the Department of Mathematics and Statistics, Faculty of Science at the Tshwane University of Technology, Pretoria, South Africa. He holds a Ph.D degree in Mathematics from the University of South Africa, Pretoria, South Africa. His research interests are in mathematical analysis and its applications. Professor Moshokoa is a highly recognised mathematician in South Africa with an NRF rating of a C2. He has successfully supervised several PhD students and Master's students, currently busy supervising one female Masters student and one male PhD student. He is a valued member of the Mathematics community, locally and abroad. He is very active in several societies or organisations: for instance, in the South African Mathematics Foundation (SAMF) he serves as an Executive Director on a part time basis, in the South African Mathematics Society (SAMS) he is a member of council, in the Mathematical Sciences Strategic Alliance in South Africa (MSSA) as a co-chair and chairperson previously and now a member of the alliance and in the Institute of Mathematical Sciences and Applications in South Africa (IMSA) he is a member and he is also involved in many more academic societies.</p>
+    </details>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+<section class="session s-invited" id="short-courses">
+  <h2>Short Courses</h2>
+  <p class="session-intro">Each short course runs from 08:30 to 10:30 on the morning indicated.</p>
+
+  <article class="abstract" id="short-course-grobler">
+    <h3>An Introduction to Metaheuristics for Discrete Optimisation Problems</h3>
+    <p class="byline">Facilitator: Jacomine Grobler <span class="affil">&middot; Stellenbosch University, South Africa</span></p>
+    <p class="slot">Tuesday 8 September &middot; 08:30 &ndash; 10:30 &middot; Theme 1</p>
+    <p>This short course offers a comprehensive yet accessible introduction to metaheuristics, a powerful class of algorithmic strategies used to solve complex discrete optimisation problems. In the broader optimisation landscape, metaheuristics bridge the gap between simple, problem-specific heuristics and strict exact algorithms, offering scalable, near-optimal solutions for computationally difficult real-world challenges. The course introduces participants to the two primary families of search strategies. We begin with neighbourhood-based metaheuristics, such as Simulated Annealing and Tabu Search, which iteratively refine a single candidate solution. We then transition to population-based metaheuristics, including Genetic Algorithms and Swarm Intelligence, exploring how nature-inspired mechanisms enable the simultaneous evaluation of multiple solutions across a search space.</p>
+    <p>A central focus of the curriculum is the practical design and implementation of these algorithms. Participants will study solution encoding&mdash;how to represent decision variables effectively&mdash;and move operators, which govern how the algorithm navigates the search space by balancing exploration and exploitation. Finally, the course provides a brief overview of advanced frontiers, including multi-objective optimisation for managing conflicting goals, and dynamic optimisation for environments that change over time. Designed for students and professionals looking to expand their problem-solving toolkit, this course combines essential theory with practical insights. By the conclusion, participants will understand how to select, adapt, and implement metaheuristic frameworks for diverse application areas like logistics, scheduling, and engineering design.</p>
+    <p class="note">A biography is available with <a href="#plenary-grobler">Prof. Grobler's plenary talk</a>.</p>
+  </article>
+
+  <article class="abstract" id="short-course-pamen">
+    <h3>An Introduction to Stochastic Optimal Control via the Maximum Principle</h3>
+    <p class="byline">Facilitator: Olivier Pamen <span class="affil">&middot; University of Liverpool, England</span></p>
+    <p class="slot">Wednesday 9 September &middot; 08:30 &ndash; 10:30 &middot; Theme 2</p>
+    <p>Stochastic optimal control is concerned with the optimisation of controlled systems whose dynamics and observations are subject to randomness. It has numerous applications in economics, engineering, finance, and insurance. Stochastic control problems can be studied using several approaches, including the stochastic maximum principle, dynamic programming, and duality methods. The stochastic maximum principle is one of the main probabilistic methods for analysing stochastic control problems. It extends Pontryagin's maximum principle from deterministic to stochastic systems and provides necessary optimality conditions expressed in terms of a coupled forward-backward system and a Hamiltonian condition. Under suitable convexity/concavity assumptions on the Hamiltonian with respect to the state and control variables, and on the terminal cost with respect to the state variable, these conditions are also sufficient. An important advantage of this approach is that it reduces the original optimisation problem to the analysis of the state equation, an adjoint backward stochastic differential equation, and a variational condition for the Hamiltonian. This often yields useful&mdash;and sometimes explicit&mdash;characterisations of optimal controls; see [1, 3]. In this course, we consider controlled stochastic differential equations with sufficiently smooth coefficients and a convex control domain. We derive necessary and sufficient optimality conditions for admissible controls using the stochastic maximum principle. The theoretical results are then illustrated through an application to a mean&ndash;variance portfolio selection problem in finance.</p>
+    <p class="keywords"><strong>Keywords:</strong> Stochastic optimal control; stochastic maximum principle; adjoint processes; backward stochastic differential equation; Hamiltonian.</p>
+    <div class="refs">
+      <strong>References</strong>
+      <ol>
+        <li>B. Øksendal and A. Sulem: <em>Applied Stochastic Control of Jump Diffusions.</em> Springer, Berlin Heidelberg, third edition, 2009.</li>
+        <li>L. Pontryagin: <em>Mathematical Theory of Optimal Processes.</em> CRC Press, 1962.</li>
+        <li>J. Yong and X. Y. Zhou: <em>Stochastic Controls: Hamiltonian Systems and HJB Equations.</em> Springer New York, NY, 1999.</li>
+      </ol>
+    </div>
+    <p class="note">A biography is available with <a href="#plenary-pamen">Prof. Pamen's plenary talk</a>.</p>
+  </article>
+
+  <article class="abstract" id="short-course-migorski">
+    <h3>An Introduction to PDE-Constrained Optimization</h3>
+    <p class="byline">Facilitator: Stanisław Migórski <span class="affil">&middot; Jagiellonian University in Krakow, Poland</span></p>
+    <p class="slot">Thursday 10 September &middot; 08:30 &ndash; 10:30 &middot; Theme 3</p>
+    <p>The short crash course provides an introduction to PDE-constrained optimization, an interdisciplinary field at the interface of optimization, partial differential equations (PDEs), and numerical analysis. Its objective is to familiarize participants with the mathematical foundations of the subject, present the principal analytical methodologies, and illustrate the breadth of modern developments and applications.</p>
+    <p>The course covers the fundamental concepts and motivation for PDE-constrained optimization, the mathematical formulation of optimization problems governed by PDEs, and the main analytical and numerical tools, including adjoint methods and first-order optimality conditions. Representative applications from engineering and the applied sciences are presented to demonstrate the versatility of the framework.</p>
+    <p>The lecture concludes with an overview of current research trends and open mathematical problems, with particular emphasis on optimization problems involving variational and hemivariational inequalities, which naturally arise in nonsmooth mechanics and contact phenomena. Special attention is given to applications in contact mechanics and fluid-structure interaction, including coupled solid-fluid systems, illustrating the interplay between rigorous mathematical analysis, optimization theory, and challenging real-world models.</p>
+    <p class="note">A biography is available with <a href="#plenary-migorski">Prof. Migórski's plenary talk</a>.</p>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+<section class="session s-invited" id="plenary">
+  <h2>Plenary Talks</h2>
+
+  <article class="abstract" id="plenary-banda">
+    <h3>How to Control Hyperbolic Systems of First-order Equations</h3>
+    <p class="byline">Prof. Mapundi Banda <span class="affil">&middot; Department of Mathematics and Applied Mathematics, University of Pretoria, South Africa</span></p>
+    <p class="slot">Monday 7 September &middot; 14:15 &ndash; 15:00 &middot; Talk 1</p>
+    <p>Hyperbolic systems of first-order partial differential equations provide the mathematical framework for modelling transport-dominated phenomena in applications ranging from fluid and gas transport, water and energy distribution networks, and traffic systems to advanced manufacturing infrastructures. Their finite propagation speeds, nonlinear interactions, and boundary-driven dynamics make them among the most challenging and practically significant systems in control theory. We will discuss how recent advances in mathematical analysis, control design, and numerical computation have transformed our ability to analyse, stabilize, optimize, and monitor these systems. Particular emphasis will be placed on the synergy between rigorous mathematical theory, and reliable computational methods, demonstrating how fundamental research continues to shape ideas of growing societal importance.</p>
+    <details class="bio">
+      <summary>Biography</summary>
+      <p>Professor Banda is a Professor in the Department of Mathematics and Applied Mathematics, University of Pretoria, South Africa. Prior to joining the University of Pretoria, he worked at the University of Stellenbosch, University of the Witwatersrand, University of KwaZulu-Natal and University of Malawi.</p>
+      <p>Prof Banda completed a doctorate degree from the Darmstadt University of Technology (Germany) with specialisation in numerical analysis and scientific computing in 2004. He also holds a Masters degree from University of Kaiserslautern (Germany) in Industrial Mathematics and another Masters from Imperial College of Science Technology and Medicine (University of London) in Computing Science. He completed a Bachelor's degree from University of Malawi.</p>
+      <p>His work lies at the interface of applied mathematics, mathematical analysis, scientific computing, and the modelling of complex dynamical systems described by partial differential equations of the transport type. His research focuses particularly on hyperbolic partial differential equations, conservation and balance laws, their optimal control and the mathematical modelling and simulation of flows in networked systems. He also has research interest in asymptotic analysis. Professor Banda has contributed to the development and analysis of numerical methods for partial differential equations, including approaches for the simulation and control of systems governed by these equations. He currently holds a National Research Foundation (NRF) B2 rating which implies his peers consider him as a researcher of considerable international recognition.</p>
+      <p>He has published on diverse topics such as coupling conditions of networked flow, optimal control and feedback stabilisation, homogenisation, inverse problems, chemical kinetics, relaxation approaches, Lattice Boltzmann methods and kinetic methods. He has also presented plenary talks as well as invited talks at several conferences. He has also hosted postdoctoral fellows and mentored postgraduate students. His collaborators work in different institutions internationally such as: RWTH-Aachen, University of Mannheim, University of the Witwatersrand, University of Kaiserslautern, Tsinghua University, University of Durham, University of Ferrara, University of KwaZulu-Natal, University of Stellenbosch, as well as the Council of Scientific and Industrial Research. Between 2021 and 2025, he was the Head of Department, Department of Mathematics and Applied Mathematics, University of Pretoria. He has served in national committees such as the National Graduate Academy, and NRF evaluation panels. He has also served as a referee for journals.</p>
+    </details>
+  </article>
+
+  <article class="abstract" id="plenary-jolaoso">
+    <h3>Optimization for Machine Learning: From Gradient Descent to Backpropagation</h3>
+    <p class="byline">Dr Lateef Jolaoso <span class="affil">&middot; Hertfordshire Business School, University of Hertfordshire, UK</span></p>
+    <p class="slot">Monday 7 September &middot; 15:15 &ndash; 16:15 &middot; Talk 2</p>
+    <p>Optimization is the computational engine driving modern machine learning and artificial intelligence, translating statistical learning problems into tractable algorithmic procedures. This workshop offers a unified tour of optimization theory as it underpins contemporary AI systems, progressing from first principles to the frontiers of current research. We begin with the geometry of convex optimization, establishing the guarantees that make gradient descent provably convergent, before confronting the nonconvex loss landscapes that characterize deep neural networks, including saddle points and local geometry. We then develop backpropagation as reverse-mode automatic differentiation, showing how the chain rule scales gradient computation to millions of parameters, and how nonsmoothness arising from ReLU activations, &#8467;<sub>1</sub> regularization, and hinge losses is handled via subgradients and proximal operators. Throughout, concepts are grounded in applications spanning machine learning, artificial intelligence, and quantitative finance, including Markowitz portfolio optimization as a convex quadratic program and its robust, multi-objective extensions. The session targets undergraduate and postgraduate students with a working knowledge of calculus and linear algebra.</p>
+    <details class="bio">
+      <summary>Biography</summary>
+      <p>Lateef Jolaoso is a Senior Research Fellow in the Big Data Technologies and Innovation Lab, Hertfordshire Business School, University of Hertfordshire, United Kingdom. He is also a research associate at the Sefako Makgatho Health Sciences University, Pretoria, South Africa. He completed his first degree from the Federal University of Agriculture Abeokuta and had his Master and doctoral degrees from the University of KwaZulu-Natal, Durban, South Africa. He is a fellow of the Institute of Mathematics and its Application, a fellow of the Higher Education Academy, a voted member of the London Mathematical Society and the Society for Industrial and Applied Mathematics.</p>
+      <p>Dr Lateef's research focuses on optimization problems, fixed point theory, machine learning and artificial intelligence. He has made tremendous contributions to the development of iterative algorithms for solving nonlinear optimization in Hilbert and Banach spaces. His research has pioneered the development of powerful algorithms and applications in this direction. He has published more than one hundred research articles and textbook chapters in various highly rated international journals and serves as editorial member in Computational and Mathematical Methods and Symmetry. Dr Lateef has supervised more than eight postgraduate students and currently supervising two PhD students.</p>
+    </details>
+  </article>
+
+  <article class="abstract" id="plenary-migorski">
+    <h3>A Hemivariational Inequality Approach to the Navier-Stokes-Darcy Model</h3>
+    <p class="byline">Prof. Stanisław Migórski <span class="affil">&middot; Faculty of Mathematics and Computer Science, Jagiellonian University in Krakow, Poland</span></p>
+    <p class="slot">Tuesday 8 September &middot; 14:15 &ndash; 15:00 &middot; Talk 3</p>
+    <p>This talk is devoted to the analysis of weak solutions for a steady-state Navier&ndash;Stokes&ndash;Darcy system describing the flow of an incompressible fluid in a bounded domain. The model incorporates a no-leak boundary condition together with a multivalued, nonmonotone friction-type slip law. The slip condition is characterized by the generalized subgradient of a locally Lipschitz superpotential. At the interface between the fluid and porous media regions, the transmission conditions consist of the balance of normal stresses expressed by the Lions condition and the tangential velocity relation given by the Beavers&ndash;Joseph&ndash;Saffman slip law. The coupled boundary value problem is formulated as an elliptic hemivariational inequality involving the Navier&ndash;Stokes velocity field and the Darcy pressure. The existence of weak solutions is established by applying a surjectivity theorem for pseudomonotone, coercive operators in reflexive Banach spaces. Under appropriate assumptions, including a suitable smallness condition, the existence result is proved. Finally, it is shown that the classical Navier&ndash;Stokes&ndash;Darcy model can be recovered from the hemivariational inequality formulation.</p>
+    <details class="bio">
+      <summary>Biography</summary>
+      <p>Professor Stanisław Migórski received his PhD degree in 1990 and his habilitation degree in 1997 in mathematics from Jagiellonian University in Krakow, Poland. Since 2003, he has been a Full Professor and Chair Professor of Mathematical Sciences at the Faculty of Mathematics and Computer Science, Jagiellonian University in Krakow. He is a world-leading expert in differential equations, functional analysis, and control theory. He has directed more than twenty five successfully completed scientific research projects, including two Excellence Science Projects of the European Union. His research results are internationally recognized, and he has well-established international collaborations. He has published six books and more than 240 papers according to the Web of Science. He serves on several editorial boards, including that of Nonlinear Analysis: Real World Applications. According to the global ranking compiled separately by Stanford University and Elsevier and SciTech Strategies in 2020-2025, he has been among the top two percent of researchers in all disciplines, representing the most influential scholars in the world. His areas of interest and expertise include mathematical analysis, differential equations, mathematical modelling, methods and techniques of nonlinear analysis, homogenization, control theory, and applications of partial differential equations to mechanics.</p>
+    </details>
+  </article>
+
+  <article class="abstract" id="plenary-grobler">
+    <h3>Chasing the Optimum: Case Studies from Modern Manufacturing and Logistics Networks</h3>
+    <p class="byline">Prof. Jacomine Grobler <span class="affil">&middot; Department of Industrial Engineering, Stellenbosch University, South Africa</span></p>
+    <p class="slot">Wednesday 9 September &middot; 14:15 &ndash; 15:00 &middot; Talk 4</p>
+    <p>This lecture explores the frontier of data-driven industrial engineering. It demonstrates how predictive and prescriptive analytics can be used to optimise complex operational systems through several case studies. The lecture describes advanced algorithmic architectures across manufacturing, logistics, agriculture, and healthcare systems. In manufacturing environments, the focus is on advanced production scheduling. Evolutionary algorithms are showcased against classical heuristics to minimise completion times. Within the logistics and transport industry, the presentation examines vehicle routing problems with drones. Expanding into agricultural supply chains, unsupervised and supervised machine learning techniques are deployed for supplier segmentation and yield prediction. Finally, the lecture extends to medical engineering and diagnostics. It demonstrates how deep learning architectures, such as Mask R-CNN and ResNet50, automate paediatric tuberculosis identification using enhanced chest radiographs.</p>
+    <details class="bio">
+      <summary>Biography</summary>
+      <p>Jacomine Grobler is an Associate Professor in the Department of Industrial Engineering at Stellenbosch University in South Africa. Her main fields of expertise are supply chain optimisation, optimisation algorithm development, and data science applications in industrial engineering. She is also interested in decision support systems in the medical industry. She spent seven years in industry before completing her PhD in 2015. She has since received several awards, including the 2017 South African Institute for Industrial Engineering Most Outstanding Young Industrial Engineering Researcher Award and the 2015 JD Roberts Emerging Researcher Award. She regularly reviews papers for leading international journals and has presented various invited lectures. Finally, she is a rated researcher with the National Research Foundation and is registered as a professional engineer with the Engineering Council of South Africa.</p>
+    </details>
+  </article>
+
+  <article class="abstract" id="plenary-pamen">
+    <h3>A Stochastic Maximum Principle for Control Problems with Singular Drift and Applications</h3>
+    <p class="byline">Prof. Olivier Pamen <span class="affil">&middot; Institute for Financial and Actuarial Mathematics (IFAM), Department of Mathematical Sciences, University of Liverpool, England</span></p>
+    <p class="slot">Thursday 10 September &middot; 14:15 &ndash; 15:00 &middot; Talk 5</p>
+    <p>This talk considers a stochastic control problem for nonlinear systems governed by stochastic differential equations with irregular drift coefficients. We study dynamics of the form</p>
+    <p class="math">b(t, x, a) = b<sub>1</sub>(t, x) + b<sub>2</sub>(x) b<sub>3</sub>(t, a),</p>
+    <p>where b<sub>1</sub> is bounded and Borel measurable, b<sub>2</sub> is of bounded variation, and b<sub>3</sub> is bounded and smooth. These weak regularity assumptions place the problem outside the scope of classical stochastic control theory. We establish a Pontryagin-type stochastic maximum principle under this low-regularity framework. The analysis relies on new well-posedness and regularity results for stochastic differential equations with random drifts of bounded variation, including existence and uniqueness. A central ingredient is an explicit representation of the first variation process via integration against the space&ndash;time local time of bounded variation processes. Our proof combines approximation methods with Ekeland's variational principle, while a Garcia&ndash;Rodemich&ndash;Rumsey inequality provides the uniform estimates needed to control the first variation process. As an application, we derive an optimal corridor-type capital adjustment strategy for an insurance surplus model.</p>
+    <details class="bio">
+      <summary>Biography</summary>
+      <p>Olivier Menoukeu Pamen is Professor of Mathematics at the University of Liverpool. He earned an MSc and MPhil in Mathematics from the University of Yaoundé I and a PhD in Financial Mathematics from the University of the Witwatersrand, where he also served as an Associate Lecturer. He went on to join the Centre of Mathematics for Applications at the University of Oslo as a Postdoctoral Research Fellow, before moving to the University of Liverpool to take up a permanent position in the Institute for Financial and Actuarial Mathematics within the Department of Mathematical Sciences. From 2016 to 2024, he also held the prestigious position of German Research Chair in Mathematics and its Applications at the African Institute for Mathematical Sciences (AIMS) Ghana.</p>
+      <p>His research interests focus on stochastic analysis and its wide-ranging applications. His work is mainly centred on stochastic optimal control theory and its applications in finance and insurance, (backward) stochastic differential equations ((B)SDEs), Malliavin calculus, and regularisation by noise. His research also addresses questions in microfinance and credit rating for low- and middle-income households. Prof. Menoukeu Pamen has published in leading international peer-reviewed journals and has also written for non-academic outlets to reach broader audiences. In recognition of his expertise, he serves on editorial boards, reviews for major journals, and regularly acts as a referee for international funding bodies, including the Volkswagen Foundation, the Alexander von Humboldt Foundation, and the South African National Research Foundation. He has supervised numerous MSc and PhD students and is a regular invited speaker at international seminars, workshops, and conferences.</p>
+    </details>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+<section class="session s-industry" id="industry">
+  <h2>Industry Talks</h2>
+
+  <article class="abstract" id="industry-dance">
+    <h3>Applications of Data Analytics, Modelling and Control to Solve Industrial Problems</h3>
+    <p class="byline">Antony Higginson and Kevin Brooks <span class="affil">&middot; DANCE &ndash; Data Analytics, Numerics and Control Engineering, School of Chemical and Metallurgical Engineering, University of the Witwatersrand, Johannesburg, South Africa</span></p>
+    <p class="slot">Tuesday 8 September &middot; 15:15 &ndash; 16:15 &middot; Industry 1</p>
+    <p>The Data Analytics, Numerics and Control Engineering (DANCE) group in the School of Chemical and Metallurgical Engineering at Wits concentrates on the use of data analytics and process control to solve problems in the industry using real-world data. This model is particularly suited to academic industrial partnerships with many companies having a large amount of data, but no capacity to use the data for process improvement, optimisation control or fault detection. With the support of a variety of industrial partners in and out of South Africa, graduate students are researching a variety of techniques to analyse data and produce practical results. Six use cases, based on the DANCE group work, are presented. Topics include the dynamic modelling of reagent effects in flotation, control of a flotation cell at the peak air recovery point, optimisation of the air and level profiles in a flotation bank, a soft sensor for platinum grade and recovery based on process and camera inputs, fault detection in a pulp and paper manufacturing facility and modelling of the effect of process parameters on the production of lignosulphonates in a wood digester system.</p>
+  </article>
+
+  <article class="abstract" id="industry-isazi">
+    <h3>Agentic Optimisation: from Solvers to Systems</h3>
+    <p class="byline">Gideon Ilung and Faeeza Lok <span class="affil">&middot; Isazi Consulting, Johannesburg, South Africa</span></p>
+    <p class="slot">Wednesday 9 September &middot; 15:15 &ndash; 16:15 &middot; Industry 2</p>
+    <p>We describe an optimisation architecture developed at Isazi that treats a problem not as one large solve, but as a sequence of small, controlled steps. The state we work with is a bundle: the problem data, the model, one candidate solution, and the issues currently in that solution. An independent validator says exactly what is wrong with a solution, since a feasible solve is not always an acceptable schedule. Each step is a verb, a function from one bundle to another, with its own objective and constraints. This lets us repair a solution that is nearly correct instead of rebuilding it, and avoids forcing every requirement into one huge objective function. Because the verbs form a small, fixed vocabulary, they also make a safe toolbox for an LLM agent: the agent never edits the solution itself, it only looks at the validated state and chooses the next verb, while the solvers remain responsible for feasibility and optimality. Using an online school timetabling problem as the running example, we show how this boundary works in practice and what we learned from logging every step.</p>
+    <details class="bio">
+      <summary>About Isazi.ai</summary>
+      <p>Isazi is the isiZulu word for scientist, and bearer of knowledge. Founded in Johannesburg in 2012 by a group of Wits graduates who believed that mathematics could solve Africa's hardest problems, Isazi has grown into a team of over 110 people across five disciplines: pure and applied mathematics, physics, statistics, electrical engineering, and computer science. Over 126 STEM degrees. Over 175 projects delivered across more than 10 industries from banking and healthcare to agriculture, insurance, and media and across South Africa, the UAE, the UK, and the USA.</p>
+      <p>Our approach is fundamentally scientific. We treat every problem as a model: define the variables, set the constraints, formalise the system, and solve it algorithmically. When conventional approaches stall, mathematicians remove the guesswork. Our flagship products, Sophia, a document intelligence and handwriting transcription platform deployed across 56 jurisdictions and Hudson, a supply chain decision and digital twin system were born directly from our consulting work and are used in production environments where near-perfect accuracy is non-negotiable. Isazi Labs is our research and development arm, where we build AI systems that don't exist yet. Current projects include AccurateAI, which provides calibrated, trustworthy inference for high-stakes domains; XEvolve, which uses LLM-guided evolutionary synthesis to discover algorithms that surpass human-designed approaches; and an AI Consultant system that combines deep research with recursive agentic workflows. Our north star is Specialized Superintelligence: systems designed to exceed human capability in narrow, high-value domains.</p>
+      <p>What makes Isazi unusual is the culture inside it. 80% of our team are under 35. We represent over 30 cultures and 20 languages and in a company that solves complex problems for a living, diversity of thought is not a nice-to-have. It is how we get to better answers. We invest deliberately in developing talent, because we have always believed the capability exists here. Our values are Empathy, Mastery, Productivity, Creativity, and Trust. They are how we hold each other accountable every day. By 2050, one in four people on earth will be African. The talent has always been here. At Isazi.ai, we built a culture where it thrives.</p>
+    </details>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+<section class="session s-contributed" id="contributed">
+  <h2>Contributed Talks</h2>
+  <p class="session-intro">Participants' talks, in programme order.</p>
+
+  <article class="abstract" id="talk-chibueze-okeke">
+    <h3>A Strongly Convergent Inertial Reflected-Forward-Backward Algorithm for Monotone Inclusion Problems with Applications</h3>
+    <p class="byline">Chibueze Okeke <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+    <p class="slot">Monday 7 September &middot; 11:00 &ndash; 11:30</p>
+    <p>In this paper, we introduce and study a strongly convergent one-step inertial-type reflected&ndash;forward&ndash;backward method. The introduced method incorporates a novel inertial technique that enhances the convergence property of the recursive sequence produced by the introduced method. Notably, the proposed method requires only one forward evaluation of the single-valued operator and one backward evaluation of the set-valued operator per iteration, a feature not present in related methods. We apply our method to medical image recovery problems and data classification problems, including logistic regression for disease prediction. Through extensive numerical experiments, we compare the performance of our proposed algorithm with existing methods in the literature. The results consistently demonstrate that our algorithm outperforms related algorithms in both computational efficiency and accuracy in all the cases examined.</p>
+  </article>
+
+  <article class="abstract" id="talk-chidi-nwakpa">
+    <h3>A Study of Optimization Problems in Real Hilbert Spaces from Continuous and Discrete Perspectives</h3>
+    <p class="byline">Chidi Nwakpa <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+    <p class="slot">Monday 7 September &middot; 11:30 &ndash; 11:55</p>
+    <p>This study investigates a broad class of optimization problems in real Hilbert spaces, analyzed through the dual lenses of continuous-time dynamical systems and discrete iterative algorithms. This study is motivated by the numerous real-life applications of these frameworks. For instance, dynamical systems are utilized to formulate a model describing the interactive behaviour between environments (humans) and robots. It can also be used to model and predict how system will evolve over time, including ecological population growth, epidemiological disease spread, and economic trends and decisions. On the other hand, iterative methods can be applied in real-life situations such as logistics, breast cancer prognosis treatment using Dantzig selectors, intensity-modulated radiation therapy treatment (IMRT) planning, image reconstruction, and others found in science and engineering.</p>
+    <p>In the continuous-time framework, we model an optimization process as a first-order dynamical system applied to solve mixed variational inequality problems. By deploying Lyapunov analysis, we obtain the weak convergence of the generated trajectories under the assumption that the associated operator is Lipschitz continuous and satisfies the general monotonicity condition. Furthermore, we establish the global exponential stability of the system's equilibrium point for all generated orbits when the Lipschitz continuous operator is h-strongly pseudomonotone. To translate these continuous insights into computationally viable schemes, we propose a family of discrete iterative algorithms, such as a three-operator splitting algorithm for solving monotone inclusion problems in real Hilbert spaces, derived via the appropriate discretization of the second-order continuous systems. We establish the weak convergence of the generated sequences when the governing operators are Lipschitz continuous, maximally monotone, and cocoercive, notably bypassing the need for standard summability conditions or line-search rules. A key improvement of our method is the integration of a single inertial extrapolation strategy with dual correction terms and a relaxation parameter to accelerate convergence. Finally, we apply our scheme to an image restoration problem. The empirical results demonstrate that our proposed method is a robust and efficient tool for high-dimensional optimization tasks.</p>
+  </article>
+
+  <article class="abstract" id="talk-professor-ndlovu">
+    <h3>A Riemannian Gradient Method with Inertial Term, Adaptive Step-Size for Optimization on Manifolds and its Applications</h3>
+    <p class="byline">Professor Ndlovu <span class="affil">&middot; Sefako Makgatho Health Sciences University, South Africa</span></p>
+    <p class="slot">Monday 7 September &middot; 12:00 &ndash; 12:25</p>
+    <p>This paper studies the problem of minimizing a smooth objective function defined on a Riemannian manifold. We introduce an inertial Riemannian gradient method with an adaptive step-size rule, which extends classical Euclidean adaptive methods (e.g., Adagrad) to curved spaces. In contrast to line search strategies, the stepsizes are adjusted dynamically without requiring any function evaluations. Motivated by trust-region approaches on manifolds, classical line-search rules with Lipschitz continuity assumptions, and modern adaptive schemes in nonconvex optimization, we provide theoretical convergence guarantees and numerical validation. The proposed method achieves efficient convergence on nonconvex landscapes while respecting the geometry of the manifold.</p>
+  </article>
+
+  <article class="abstract" id="talk-koketso-malebana">
+    <h3>Some Recent Advances by Iteration for Non-smooth Convex Minimization Problems</h3>
+    <p class="byline">Koketso Malebana <span class="affil">&middot; Sefako Makgatho Health Sciences University, South Africa</span></p>
+    <p class="slot">Monday 7 September &middot; 12:25 &ndash; 12:50</p>
+    <p>In this presentation, we propose a modified proximal point algorithm together with a two&ndash;steps inertial method for approximating the solution of convex minimization problems in the setting of a Hadamard manifold. Using an Armijo linesearch technique, we establish a convergence result of the proposed method under some mild conditions. The inertial method also helps to speed up the rate of convergence of the proposed method. Lastly, we present some numerical experiments to show the performance of our algorithm and compare our results with some related ones in the literature.</p>
+  </article>
+
+  <article class="abstract" id="talk-kazeem-aremu">
+    <h3>A Derivative-Free Optimization Method on Hadamard Manifold for Solving Nonlinear Monotone Systems with Application in Image Deblurring</h3>
+    <p class="byline">Kazeem Aremu <span class="affil">&middot; Sefako Makgatho Health Sciences University, South Africa</span></p>
+    <p class="slot">Monday 7 September &middot; 12:50 &ndash; 13:15</p>
+    <p>In this work, we develop an innovative derivative-free optimization method for solving large-scale nonlinear monotone systems on Hadamard manifolds. The proposed algorithm is built as a convex combination of two classical conjugate gradient schemes, Fletcher&ndash;Reeves and Polak&ndash;Ribiere&ndash;Polyak, thereby inheriting the good global convergence properties of the former and the practical efficiency of the latter. Unlike conventional Riemannian optimization methods, which typically require gradients or Jacobians that may be unavailable or prohibitively expensive to compute on curved spaces, the new approach is genuinely derivative-free. It integrates hybrid conjugate gradient strategies with hypersurface projection techniques defined via retractions and vector transport, ensuring that all iterates remain on the manifold while preserving suitable conjugacy and descent properties. One feature of the algorithm is its function-based line search, which employs Armijo- and Wolfe-type conditions to guarantee sufficient descent without using derivatives of the underlying operator, thereby mitigating stagnation issues commonly observed in derivative-free schemes. Under standard assumptions of monotonicity and Lipschitz continuity, a rigorous convergence analysis establishes global convergence of the iterates to a solution of the monotone system. Extensive numerical experiments on test problems with dimensions up to 50,000 illustrate the method's efficiency, robustness, and competitiveness relative to existing state-of-the-art algorithms for large-scale nonlinear systems. Finally, when applied to an image restoration problem, the method successfully reconstructs severely degraded images, achieving high-quality reconstructions as quantified by standard performance metrics such as Peak Signal-to-Noise Ratio (PSNR) and Signal-to-Noise Ratio (SNR), demonstrating its practical relevance in imaging applications.</p>
+  </article>
+
+  <article class="abstract" id="talk-talat-nazir">
+    <h3>Optimization Methods for Solving Problems of Machine Learning</h3>
+    <p class="byline">Talat Nazir <span class="affil">&middot; University of South Africa, South Africa</span></p>
+    <p class="slot">Tuesday 8 September &middot; 11:00 &ndash; 11:30</p>
+    <p>In this talk, I will present some new methods of optimization theory for data classification via support vector machines. I describe a powerful method for solving problems based on a variational inequality problem. I also show that this method is equivalent to several other mathematical methods. Various examples and applications are also present to support the main results.</p>
+  </article>
+
+  <article class="abstract" id="talk-mohamed-elfadul">
+    <h3>A Stability-Based Approach for Adaptive Batch Sizing in Stochastic Gradient Descent</h3>
+    <p class="byline">Mohamed Elfadul <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+    <p class="slot">Tuesday 8 September &middot; 11:30 &ndash; 11:55</p>
+    <p>The performance of Stochastic Gradient Descent (SGD) is highly sensitive to the choice of batch size, a hyperparameter that is typically set manually and kept fixed or decayed according to a predefined schedule. This static approach fails to adapt to the dynamically changing optimization landscape during training. In this work, we introduce Loss Improvement Confidence (LIC), a novel and computationally lightweight method for adaptively adjusting the batch size. LIC models the training process as a macroscopic stochastic system and adjusts the batch size to maintain a target level of confidence in the stability of the loss reduction, using a risk-adjusted metric inspired by the Sharpe Ratio. We provide a theoretical convergence proof for LIC-SGD in the standard non-convex setting. We demonstrate empirically across the MNIST and CIFAR-10 datasets that LIC is a highly competitive scheduler. On short training runs on MNIST, LIC achieves the highest final accuracy of all methods tested (99.47%). On the more complex CIFAR-10 dataset, LIC demonstrates unique, responsive behavior to the training dynamics and delivers strong performance without manual tuning. The method is shown to be robust to its own hyperparameters, validating its efficacy as a practical tool for automating batch size selection.</p>
+  </article>
+
+  <article class="abstract" id="talk-nneka-umeorah">
+    <h3>Neural PDE Methods for Financial Free-Boundary Problems</h3>
+    <p class="byline">Nneka Umeorah <span class="affil">&middot; Cardiff University, Wales</span></p>
+    <p class="slot">Tuesday 8 September &middot; 12:00 &ndash; 12:25</p>
+    <p>Free-boundary partial differential equations arise naturally in several areas of computational finance, particularly in the valuation of financial derivatives with early exercise and path-dependent features. These problems are often challenging due to moving boundaries, nonlinearities, and the need for accurate numerical approximations under varying market conditions. This talk presents recent advances in neural-network-based methods for solving financial free-boundary problems. The discussion focuses on deep learning frameworks that integrate partial differential equations with feed-forward neural networks to simultaneously approximate option values, free boundaries, and associated sensitivity measures. A key aspect of the methodology involves transforming the original moving-boundary problem into a fixed-domain formulation, followed by the construction of auxiliary neural-network functions that satisfy the required boundary and initial conditions. The presentation highlights the mathematical formulation of these models, the optimisation framework used for training, and the role of neural networks in approximating complex financial systems governed by PDEs. Numerical experiments demonstrate that the proposed methods achieve strong agreement with benchmark finite-difference and existing numerical schemes while providing flexible and scalable alternatives for high-dimensional problems.</p>
+  </article>
+
+  <article class="abstract" id="talk-anesu-pisira">
+    <h3>Persistent Learning-Optimization Integration: A HyGQAP Framework for the Quadratic Assignment Problem with Applications to Warehouse Logistics</h3>
+    <p class="byline">Anesu Pisira <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+    <p class="slot">Tuesday 8 September &middot; 12:25 &ndash; 12:50</p>
+    <p>The Quadratic Assignment Problem (QAP) models fundamental challenges in logistics infrastructure, including facility layout, warehouse slotting, and transportation network design. Despite decades of research, existing solvers face a critical trade-off: exact methods guarantee optimality but are computationally intractable for real-world scales, while learning-based approaches lack mathematical convergence guarantees and typically discard neural insights after initialization. This presentation introduces HyGQAP, a novel hybrid framework that bridges this gap by integrating Graph Neural Network (GNN) embeddings with proximal convex optimization through persistent learned guidance. Unlike existing methods that use learning only for initialization, HyGQAP maintains GNN-derived structural insights throughout every optimization iteration via a spectral guidance mechanism derived from nuclear norm linearization. The framework operates in four phases: GNN-based representation learning, similarity-informed initialization over the Birkhoff polytope, convex refinement with persistent spectral guidance, and combinatorial projection with local search. We provide theoretical convergence guarantees and demonstrate that HyGQAP finds optimal solutions for QAP instances up to n = 25 within seconds. Applied to warehouse slotting which can be a critical logistics challenge in Sub-Saharan African supply chains, our method reduces picker travel distance by 47% compared to baseline strategies and maintains robustness under demand spikes, product shifts, and infrastructure disruptions on simulated data. This work establishes a new paradigm for learning-optimization integration applicable to logistics infrastructure, facility planning, and broader combinatorial optimization challenges facing emerging economies.</p>
+  </article>
+
+  <article class="abstract" id="talk-maryam-iqbal">
+    <h3>PDE-Constrained Optimization in Dynamic Systems: Theory and Environmental Applications</h3>
+    <p class="byline">Maryam Iqbal <span class="affil">&middot; University of Johannesburg, South Africa</span></p>
+    <p class="slot">Tuesday 8 September &middot; 12:50 &ndash; 13:15</p>
+    <p>PDE-constrained optimization is an important area of applied mathematics that combines partial differential equations (PDEs) with optimization techniques to analyze and control dynamic systems evolving in space and time. In such problems, PDEs describe the underlying physical or environmental processes, while optimization seeks the best control or decision strategy subject to these governing constraints. This framework has gained significant attention due to its wide applicability in modelling complex real-world systems. This presentation provides an overview of the theoretical foundations of PDE-constrained optimization in dynamic systems, including state equations, control variables, objective functionals, and constraint handling. Particular emphasis is placed on mathematical modelling and optimal control approaches for systems governed by diffusion, advection, and reaction processes. Environmental applications such as pollution transport, groundwater contamination control, heat transfer, and resource management are discussed to illustrate the practical relevance of the theory. Numerical methods for solving PDE-constrained optimization problems and computational challenges are also highlighted. The talk demonstrates how PDE-based optimization serves as a powerful mathematical tool for understanding and improving dynamic environmental systems.</p>
+  </article>
+
+  <article class="abstract" id="talk-zakaria-ali">
+    <h3>Optimal Control and Resource Allocation for Energy Distribution Under Load-Shedding Constraints in Sub-Saharan Africa</h3>
+    <p class="byline">Zakaria Ali <span class="affil">&middot; University of South Africa, South Africa</span></p>
+    <p class="slot">Wednesday 9 September &middot; 11:00 &ndash; 11:30</p>
+    <p>Many countries in Sub-Saharan Africa continue to experience severe electricity shortages, resulting in frequent load-shedding, reduced industrial productivity, and significant socioeconomic disruptions. The increasing integration of renewable energy sources, coupled with aging infrastructure and growing urban populations, has further complicated energy distribution management. This study proposes the development of a mathematical optimization and optimal control framework for energy distribution under load-shedding conditions in Sub-Saharan Africa. The research will formulate a dynamic model that incorporates electricity demand, generation capacity, transmission constraints, renewable energy variability, and priority-based energy allocation to critical sectors such as healthcare, water supply, education, and industry. Optimal control techniques and constrained optimization methods will be employed to determine load allocation strategies that minimize economic losses, service disruptions, and energy inefficiencies while ensuring equitable electricity distribution. The proposed model will integrate stochastic components to account for uncertainties associated with renewable energy generation and fluctuating demand patterns. Numerical simulations and scenario analyses will be conducted using real or representative regional energy data to evaluate the effectiveness of the proposed strategies. The study aims to provide a mathematically rigorous and practically applicable framework that can support policymakers, utility providers, and infrastructure planners in improving energy resilience and sustainability across Sub-Saharan Africa.</p>
+  </article>
+
+  <article class="abstract" id="talk-ciara-losel">
+    <h3>Optimising Charging Infrastructure for Electric Freight: A Combinatorial Optimisation Approach with Application to Namibia</h3>
+    <p class="byline">Ciara Losel <span class="affil">&middot; Heriot Watt University, Scotland</span></p>
+    <p class="slot">Wednesday 9 September &middot; 11:30 &ndash; 11:55</p>
+    <p>The decarbonisation of road freight transport is a critical component of achieving net-zero emission targets. Whilst significant progress has been made in reducing emissions from private vehicles, Heavy Duty Vehicles (HDVs) continue to present a major source of transport-related emissions. Electrification is widely regarded as the pathway to decarbonising road freight, however, large-scale deployment is constrained by the complexity of HDV operations. These challenges are particularly pronounced in Sub-Saharan Africa, where freight networks are characterised by long-distance transport corridors and sparse infrastructure provision. In Namibia, one of the most sparsely populated countries, large distances and low population density further constrain infrastructure design.</p>
+    <p>This research is ongoing and will develop a data-driven combinatorial optimisation framework for the placement of charging infrastructure for electric HDVs. The problem is formulated as a large-scale network design problem, in which candidate charging locations are selected to optimise network performance. The resulting problem will be computationally challenging, motivating the use of heuristic and metaheuristic solution approaches alongside classical optimisation methods.</p>
+    <p>The methodology will combine a systematic literature review, network modelling using Namibian HDV fleet data and simulation-based evaluation. Alternative infrastructure configurations will be assessed using network-based performance metrics under multiple operational scenarios.</p>
+  </article>
+
+  <article class="abstract" id="talk-bernard-adjei">
+    <h3>A Validated Heuristic Approach for a Mixed-Fleet Routing Problem with Time Window and Optimal Location of Multiple Charging Stations</h3>
+    <p class="byline">Bernard Adjei <span class="affil">&middot; University of Energy and Natural Resources, Ghana</span></p>
+    <p class="slot">Wednesday 9 September &middot; 12:00 &ndash; 12:25</p>
+    <p>The integration of electric vehicles (EVs) into logistics is frequently hindered by fragmented planning of charging infrastructure and daily operational routing. While traditional models treat these as independent challenges, this study addresses the Mixed-Fleet, Multiple-Charging-Station Location&ndash;Routing Problem with Time Windows (MF-MCS-LRPTW) through a co-optimization approach. We propose an integrated framework that jointly optimizes vehicle route, product delivery schedules, and the strategic selection of charger types across candidate locations. To solve this NP-hard problem, we develop a hybrid evolutionary search methodology validated against a linearized Mixed-Integer Programming (MIP) model. This approach ensures mathematical rigor on small-scale benchmarks while providing the scalability required for real-world logistics networks. Results demonstrate that co-optimization significantly outperforms sequential planning by surfacing critical trade-offs between operational costs and &ldquo;distance shortfall&rdquo; risks. By generating a comprehensive Pareto front, this methodology provides decision-makers with a robust toolkit for transitioning to sustainable, large-scale electric fleets.</p>
+  </article>
+
+  <article class="abstract" id="talk-jean-menjanahary">
+    <h3>Time-Dependent Optimization for Shortest Path Routing Under Peak-Hour Congestion in Antananarivo</h3>
+    <p class="byline">Jean Menjanahary <span class="affil">&middot; University of Antananarivo, Madagascar</span></p>
+    <p class="slot">Wednesday 9 September &middot; 12:25 &ndash; 12:50</p>
+    <p>Urban mobility in Antananarivo, Madagascar, is heavily constrained by severe traffic congestion, characterized by distinct peak-hour surges and a lack of automated traffic control infrastructure such as traffic lights. Under these conditions, standard static routing algorithms fail to provide realistic solutions. This ongoing research project introduces a time-dependent combinatorial optimization framework designed to analyze and determine the optimal shortest path between network nodes under highly volatile traffic conditions. We model the city's primary road network as a directed graph G = (V, E), where the weight of each edge e in E is defined as a time-varying cost function representing travel delay as a function of departure time and localized peak-hour congestion data. To solve this Time-Dependent Shortest Path Problem (TDSPP) efficiently without relying on centralized infrastructure, we propose to implement and compare deterministic label-correcting algorithms alongside adaptive metaheuristics. The model aims to simulate commuter behavior and routing efficiency during morning, midday, and evening peak intervals. This study expects to demonstrate how applied combinatorial optimization can yield actionable, low-cost routing strategies to bypass severe bottlenecks, offering scalable solutions to improve urban logistics and economic productivity in infrastructure-constrained Sub-Saharan cities.</p>
+  </article>
+
+  <article class="abstract" id="talk-ali-haroon">
+    <h3>Dynamic Bilevel Optimization for Carbon Emission Reduction</h3>
+    <p class="byline">Ali Haroon <span class="affil">&middot; University of KwaZulu-Natal, South Africa</span></p>
+    <p class="slot">Wednesday 9 September &middot; 12:50 &ndash; 13:15</p>
+    <p>This work presents a dynamic bilevel optimisation framework for designing and evaluating carbon emission reduction policies. It models the strategic interaction between a policymaker (the leader), who seeks to minimize emissions, and profit-maximizing energy producers (the followers). We introduce nonlinear tax and subsidy functions that evolve over time, enabling a more realistic simulation of escalating policy interventions. Energy production technologies are classified into three categories: high-carbon, medium-carbon, and low-carbon, based on their carbon intensity and unit production costs. Our theoretical analysis establishes the existence of a solution and, most importantly, formally proves that these policy instruments can guarantee a finite-horizon phase-out of high-carbon sources. To solve the model, we propose an adaptive genetic algorithm with time-decaying crossover and mutation parameters. We validate the framework in a case study calibrated with data from South Africa's energy sector. The results show that the optimal dynamic policy substantially outperforms static benchmarks, achieving deep decarbonization by engineering a predictable coal phase-out while satisfying system constraints. Our framework offers a prescriptive and robust decision support tool for policymakers to design and calibrate adaptive, data-driven climate policies.</p>
+  </article>
+
+  <article class="abstract" id="talk-winfrida-mwigilwa">
+    <h3>Legendre Transform Dual Asymptotic Solution for Insurers Under the Heston Local-Stochastic Volatility Model: A Comparison of Variance Premium and Expected Value Principle</h3>
+    <p class="byline">Winfrida Mwigilwa <span class="affil">&middot; Ardhi University, Tanzania</span></p>
+    <p class="slot">Thursday 10 September &middot; 11:00 &ndash; 11:30</p>
+    <p>This study examines optimal investment and reinsurance strategies for two competing insurers who are concerned with their relative performance. Each insurer can purchase reinsurance and invest in a financial market consisting of one risk-free asset and one risky asset, with the risky asset's price modeled using the Heston Local-Stochastic Volatility (HLSV) model, which combines the characteristics of both the CEV and Heston models. When optimizing strategies under an exponential utility function, an analytical solution is not attainable due to the complex nonlinearity of the resulting partial differential equation. To address this, we employ a dual method, Legendre transformation, and an asymptotic expansion technique to obtain an approximate solution considering only the slow-varying volatility factor. The analysis is conducted under two premium calculation frameworks: the variance premium principle in the first part and the expected value principle in the second part. Finally, we complement the theoretical findings with numerical studies and provide economic interpretations for the optimal reinsurance strategies derived under both principles.</p>
+  </article>
+
+  <article class="abstract" id="talk-keneth-motjeane">
+    <h3>A Double Obstacle Formulation for Optimal Portfolio Selection with Transaction Costs</h3>
+    <p class="byline">Keneth Motjeane <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+    <p class="slot">Thursday 10 September &middot; 11:30 &ndash; 11:55</p>
+    <p>This presentation investigates the continuous-time Merton portfolio selection problem in the presence of proportional transaction costs. Unlike the classical Merton framework, where continuous rebalancing is optimal, the inclusion of transaction costs leads to a singular stochastic control problem characterized by a variational inequality with gradient constraints. The problem can be reformulated as a double obstacle problem, which provides a convenient framework for analysing optimal buying and selling regions in portfolio optimisation. The study focuses on the numerical solution of the resulting nonlinear partial differential equation using finite difference techniques. In particular, Newton's method is employed to handle the nonlinear penalty terms arising from the obstacle formulation, while the Crank&ndash;Nicolson finite difference scheme is used for temporal discretisation to improve numerical stability and accuracy. The presentation discusses the mathematical formulation of the model, the derivation of the double obstacle problem, and the implementation of the numerical methods. Numerical results illustrating the optimal trading boundaries and the no-transaction region are also presented. The study demonstrates how transaction costs significantly alter optimal investment behaviour and highlights the effectiveness of Newton iteration and Crank&ndash;Nicolson methods in solving portfolio optimisation problems with free-boundary structures.</p>
+  </article>
+
+  <article class="abstract" id="talk-francis-nwawuru">
+    <h3>A Single-Projection Proximal Algorithm for Stochastic Mixed Variational Inequalities with Applications to Breast Cancer Screening</h3>
+    <p class="byline">Francis Nwawuru <span class="affil">&middot; Chukwuemeka Odumegwu Ojukwu University, Nigeria</span></p>
+    <p class="slot">Thursday 10 September &middot; 12:00 &ndash; 12:25</p>
+    <p>We studied a stochastic mixed variational inequality problem (SMVIP) that encompasses stochastic optimization, stochastic variational inequality problems, and a composite convex minimization problem as special cases. To solve this problem, we proposed a single-projection proximal algorithm (SiPPA) that combined golden ratio dynamics with an adaptive stepsize strategy. In contrast to classical stochastic extragradient and subgradient extragradient methods, the proposed algorithm required only one projection and one averaged stochastic oracle call per iteration, resulting in reduced computational cost. Under mild assumptions on the stochastic oracle and monotonicity of the expected operator, we established almost sure convergence of the generated sequence. Moreover, when the operator was strongly monotone, we proved that the algorithm converges at an R-linear rate. Numerical experiments on benchmark problems and real-world learning tasks on breast cancer screening, illustrate the effectiveness and efficiency of the proposed approach relative to existing stochastic methods.</p>
+  </article>
+
+  <article class="abstract" id="talk-ndapandula-hamupolo">
+    <h3>Robust Portfolio Optimisation for Uncertain Investment Variables</h3>
+    <p class="byline">Ndapandula Hamupolo <span class="affil">&middot; Namibia University of Science and Technology, Namibia</span></p>
+    <p class="slot">Thursday 10 September &middot; 12:25 &ndash; 12:50</p>
+    <p>This study investigates the application of robust portfolio optimisation techniques to real-world financial data, with the aim of addressing uncertainty in investment decision-making and contributing to financial inclusion. Financial market data sourced from Bloomberg is utilised to model investment environments characterised by uncertain asset returns, market volatility, and changing economic conditions. The study applies existing robust optimisation techniques to minimise portfolio risk while optimising returns under different uncertainty structures. These models are compared with traditional portfolio optimisation approaches to evaluate their relative performance in terms of risk reduction and return outcomes. Using real-world data, the effectiveness of the models is assessed through backtesting and empirical analysis, focusing on portfolio stability and adaptability to dynamic market conditions. Furthermore, the research evaluates the computational performance and stability of the implemented models to ensure their practical applicability. By incorporating uncertainty directly into the optimisation process, the study demonstrates how robust portfolio optimisation can produce more reliable and resilient investment strategies. The findings highlight the potential of these methods to support better financial decision-making in uncertain environments and contribute to broader efforts in enhancing financial inclusion.</p>
+  </article>
+
+  <article class="abstract" id="talk-timothy-bisakaya">
+    <h3>Optimizing Digital Credit, Risk Modelling, and Inclusive Finance Under Uncertainty</h3>
+    <p class="byline">Timothy Bisakaya <span class="affil">&middot; The Co-operative University of Kenya, Kenya</span></p>
+    <p class="slot">Thursday 10 September &middot; 12:50 &ndash; 13:15</p>
+    <p>Financial inclusion remains a critical challenge in many developing economies, particularly among low-income households, informal workers, women, and rural populations who face limited access to affordable and reliable financial services. The rapid growth of digital finance, mobile lending, and alternative credit scoring has created new opportunities for expanding access to credit and financial products. However, these systems operate in highly uncertain environments characterized by incomplete information, fluctuating incomes, default risks, market volatility, and behavioral unpredictability.</p>
+    <p>This study explores the application of stochastic control theory in enhancing financial inclusion through improved decision-making under uncertainty. Stochastic control theory provides mathematical frameworks for optimizing dynamic financial decisions in environments where outcomes evolve randomly over time. The study examines how stochastic models can improve risk assessment, digital lending strategies, loan portfolio optimization, and adaptive credit scoring systems for underserved populations.</p>
+    <p>The paper further investigates the role of stochastic control in balancing financial accessibility with institutional sustainability. By integrating probabilistic modelling, machine learning, and alternative data sources such as mobile money transactions and digital footprints, financial institutions and SACCOs can design more inclusive lending systems while minimizing default risks. The research also analyzes practical applications in fintech, microfinance, and mobile lending platforms across emerging economies, with particular attention to Sub-Saharan Africa.</p>
+    <p>The study argues that stochastic control approaches can support more resilient and equitable financial ecosystems by enabling real-time adaptive lending decisions, personalized financial products, and efficient risk-sharing mechanisms. Ultimately, the research contributes to the growing discourse on how advanced mathematical and financial engineering techniques can be leveraged to deepen financial inclusion, strengthen digital financial systems, and promote sustainable economic development in uncertain.</p>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+<section class="session s-poster" id="posters">
+  <h2>Poster Abstracts</h2>
+  <p class="session-intro">Posters are presented during the welcome cocktail and poster session on Tuesday 8 September, 19:00 &ndash; 22:00.</p>
+
+  <article class="abstract" id="poster-ernest-obini">
+    <h3>Second-Order Dynamical Systems for Monotone Inclusions with Applications to PDE-Constrained Optimization</h3>
+    <p class="byline">Ernest Obini <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+    <p>We investigate the asymptotic behaviour of trajectories generated by a second-order dynamical system with vanishing damping for solving monotone inclusion problems in a real Hilbert space. Such formulations arise naturally in infinite-dimensional optimization, including PDE-constrained optimization problems. The system is governed by a nonexpansive operator and incorporates both vanishing damping and an implicit Hessian-type damping term. We prove existence and uniqueness of strong global solutions, establish boundedness of trajectories, and show their weak convergence to a solution of the underlying problem using Lyapunov-type energy techniques and the continuous Opial lemma. These results provide a theoretical foundation for continuous-time optimization methods relevant to the analysis and control of PDE-governed dynamical systems. Numerical experiments illustrate the theoretical findings.</p>
+  </article>
+
+  <article class="abstract" id="poster-leah-wangu">
+    <h3>Combinatorial Optimization Approaches for Climate-Resilient Food Distribution Systems</h3>
+    <p class="byline">Leah Wangu <span class="affil">&middot; University of Edinburgh, Scotland</span></p>
+    <p>Climate change continues to accelerate due to rising greenhouse gas emissions, increasing the need for effective carbon sequestration strategies to support global climate mitigation efforts. Carbon sequestration, through approaches such as reforestation, afforestation, soil carbon storage, and ecosystem restoration, plays a critical role in reducing atmospheric carbon dioxide concentrations. However, identifying the most efficient sequestration strategies across different geographic regions and resource constraints remains a significant challenge. This study explores the application of combinatorial optimization techniques in improving carbon sequestration planning and decision-making.</p>
+    <p>The research examines how optimization models can support the selection of suitable sequestration sites, allocation of limited resources, and prioritization of interventions to maximize carbon capture while minimizing economic and environmental costs. Techniques such as network optimization, resource allocation models, and scheduling algorithms are analysed for their potential contribution to climate mitigation planning. The study also considers constraints related to land availability, biodiversity protection, implementation costs, and long-term sustainability.</p>
+    <p>The findings demonstrate that combinatorial optimization can enhance the efficiency and scalability of carbon sequestration initiatives by enabling data-driven and evidence-based climate strategies. This research contributes to the growing intersection between computational optimization and climate science, highlighting the role of mathematical models in supporting sustainable environmental management and global carbon reduction efforts.</p>
+  </article>
+
+  <article class="abstract" id="poster-michael-bryant">
+    <h3>Goal Programming for Generator Maintenance Scheduling</h3>
+    <p class="byline">Michael Bryant <span class="affil">&middot; University of Cape Town, South Africa</span></p>
+    <p>The Generator Maintenance Scheduling problem is well-known in the field of Operations Research. This project aimed to analyse, add to and extend the literature on this problem by exploring the use of goal programming as a method for multiobjective optimisation. The problem is defined as deciding when to initiate planned maintenance on power generators in a yearly period in a way that does not violate any constraints and optimises the objectives. Three objectives are applied in this project: minimisation of cost, minimisation of probability of generator failure, and minimisation of sum of squared reserve margin. Three different approaches to solving the GMS problem were explored and analysed: linear goal programming, simulated annealing with goal programming, and constraint programming. The aforementioned methods were then applied to two test systems (an IEEE test system and a test system based on Eskom's national power grid), and the results compared to the literature and to each other. Finally, the results presented will show the overall effectiveness, advantages and disadvantages of the three different approaches to solving the GMS problem.</p>
+  </article>
+
+  <article class="abstract" id="poster-selina-liyengwa">
+    <h3>Implementing a Game-Theoretic Framework for Multi-Account Portfolio Control Under Coupled Market Impact Risk</h3>
+    <p class="byline">Selina Liyengwa <span class="affil">&middot; University of Edinburgh, Scotland</span></p>
+    <p>This project implements a decentralized, game-theoretic optimization framework to address the dual challenges of endogenous liquidity risk and structural unfairness in multi-client asset management. In alignment with the core mission of optimizing societal and financial infrastructure, the project models the real-world operational frictions that occur when an asset management firm rebalances multiple independent client portfolios simultaneously. When these trades are pooled in the market, they stress execution infrastructure, generating an aggregate market impact that triggers severe price slippage, devalues assets, and degrades realized returns.</p>
+    <p>To resolve this decision-making challenge, a non-differentiable mean-variance asset allocation problem is framed as a non-cooperative game. By incorporating the coupled transaction drag directly into a concave potential function, the framework allows individual portfolio control strategies to be optimized against true, aggregated market friction. The project aims to achieve equilibrium by performing portfolio allocations/rebalances. The project explores how this mathematical optimization framework directly supports financial inclusion. By analyzing the trade-offs between Pareto-efficient social welfare optimization and Nash allocations, the project demonstrates that a non-cooperative framework prevents the algorithmic bullying of smaller, vulnerable accounts, thereby guaranteeing absolute envy-freeness across asymmetric portfolios.</p>
+  </article>
+
+  <article class="abstract" id="poster-sephetha-ngwana">
+    <h3>Stochastic Control Approaches to Credit Risk and Lending Decisions under Uncertainty</h3>
+    <p class="byline">Sephetha Ngwana <span class="affil">&middot; University of Cape Town, South Africa</span></p>
+    <p>This work explores stochastic control approaches to decision-making in credit risk and lending under uncertainty. Credit markets in South Africa and broader Sub-Saharan Africa are characterised by incomplete information, income volatility, and evolving borrower behaviour, making optimal lending decisions a complex problem. The study considers how a lender can allocate credit over time while balancing expected repayment against default risk. The lending decision problem is formulated as a dynamic optimization problem under uncertainty using a simplified stochastic framework for borrower risk evolution. The focus is on how optimal credit allocation policies adjust as new information on borrower performance and macroeconomic conditions becomes available. Concepts from stochastic processes and optimisation are used to describe how lending decisions can be updated in response to observed risk dynamics. The study also considers data-driven and simulation-based methods for evaluating credit portfolios under different economic scenarios where closed-form solutions are not available. This includes analysing how varying risk preferences affect lending strategies and portfolio stability. Overall, the work highlights how stochastic optimisation can support more effective and inclusive lending decisions in uncertain environments.</p>
+  </article>
+
+  <article class="abstract" id="poster-shamsudeeen-kajola">
+    <h3>A Tseng Algorithm Based on the Golden Ratio Technique for Solving Variational Inequality Problems in Hilbert Spaces</h3>
+    <p class="byline">Shamsudeeen Kajola <span class="affil">&middot; University of KwaZulu-Natal, Durban, South Africa</span></p>
+    <p>This study investigates the iterative approximation of solutions to variational inequality problems in Hilbert spaces. In particular, we introduce a Tseng-type iterative algorithm incorporating the golden ratio technique for solving variational inequality problems governed by quasimonotone operators. A notable feature of the proposed scheme is its self-adaptive nature, which removes the need for prior estimation or knowledge of the Lipschitz constant associated with the cost operator, thereby enhancing its practical applicability in situations where such information is unavailable or difficult to estimate accurately. Under appropriate and standard assumptions imposed on the control parameters and the underlying operator, we establish the weak convergence of the sequence generated by the algorithm to an element of the solution set of the variational inequality problem. Moreover, in the case where the cost operator satisfies the stronger assumption of strong pseudomonotonicity, we further prove that the proposed iterative method converges R-linearly. To validate the theoretical findings and assess the computational efficiency of the algorithm, several numerical experiments are conducted. The reported results demonstrate the robustness, effectiveness, and competitive performance of the proposed method when compared with existing related algorithms in the literature.</p>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+</main>
+
+<footer>
+  © 2026 MOOCTA Research Group
+</footer>
+
+</body>
+</html>
