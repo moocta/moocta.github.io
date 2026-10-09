@@ -275,6 +275,11 @@ main a.slides-link:hover {
 }
 
 @media (max-width: 768px) {
+  /* Let the stacked menu scroll away instead of staying pinned over the page */
+  nav {
+    position: static;
+  }
+
   /* Stack navigation vertically */
   .nav-wrap {
     flex-direction: column;
