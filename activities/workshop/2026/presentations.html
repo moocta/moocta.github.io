@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presentations - Workshop 2026 | MOOCTA</title>
+  <meta name="description" content="Presentation slides from the MOOCTA 2026 workshop on Mathematical Optimization and Control for Industrial and Societal Challenges in Sub-Saharan Africa: keynote, plenary, industry and contributed talks, 7-10 September 2026, Pretoria.">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="icon" type="image/png" href="../../../images/Logo.png">
+  <style>
+    /* ---- Page intro ---- */
+    .page-header {
+      background: #f0f4f8;
+      border: 1px solid #d0e0f5;
+      border-radius: 8px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+    }
+    .page-header h1 { margin: 0 0 10px; color: #102a43; }
+    .page-header p.meta { font-size: 1.05em; color: #334e68; margin: 0 0 20px; }
+    .page-header .button { margin: 0 10px 0 0; }
+    .note { font-size: 0.9em; color: #486581; font-style: italic; }
+
+    /* ---- Jump to day ---- */
+    .day-index {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .day-index a {
+      display: block;
+      background: white;
+      border: 1px solid #d0e0f5;
+      border-top: 4px solid #102a43;
+      border-radius: 6px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .day-index a:hover { background: #f4f9ff; border-color: #9dc0e6; border-top-color: #0b3d91; }
+    .day-index span { display: block; }
+    .day-index .day-name { font-weight: bold; font-size: 1.05em; color: #102a43; }
+    .day-index .day-date { color: #334e68; }
+    .day-index .day-count { margin-top: 4px; font-size: 0.85em; color: #486581; }
+
+    /* ---- Days ---- */
+    .day { margin-bottom: 45px; }
+    .day > h2 {
+      color: #102a43;
+      border-bottom: 2px solid #102a43;
+      padding-bottom: 6px;
+      margin-bottom: 5px;
+    }
+    .day, .talk { scroll-margin-top: 70px; }
+
+    /* ---- Presentation entries ---- */
+    .talk {
+      display: grid;
+      grid-template-columns: 208px minmax(0, 1fr);
+      gap: 18px 24px;
+      align-items: start;
+      border: 1px solid #dbe4ee;
+      border-left: 5px solid #102a43;
+      border-radius: 6px;
+      padding: 18px 20px;
+      margin: 18px 0;
+    }
+    .talk:target {
+      background: #f4f9ff;
+      border-color: #9dc0e6;
+      border-left-color: #0b3d91;
+    }
+    /* Session colour accents, matching the programme legend */
+    .t-contributed { border-left-color: #8e5f92; }
+    .t-industry { border-left-color: #c4703a; }
+
+    .talk-thumb {
+      display: block;
+      aspect-ratio: 16 / 9;
+      background: #f0f4f8;
+      border: 1px solid #d0e0f5;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .talk-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.2s;
+    }
+    .talk-thumb:hover img { transform: scale(1.03); }
+
+    .talk-meta { margin: 0 0 8px; font-size: 0.85em; color: #486581; }
+    .talk-type {
+      display: inline-block;
+      margin-right: 8px;
+      padding: 1px 8px;
+      border-radius: 3px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: #eaf2fc;
+      color: #102a43;
+    }
+    .t-contributed .talk-type { background: #faeefa; color: #6f4673; }
+    .t-industry .talk-type { background: #fdeee1; color: #9c5226; }
+    .talk h3 { margin: 0 0 8px; color: #102a43; font-size: 1.08em; line-height: 1.35; }
+    .byline { margin: 0; font-weight: bold; color: #243b53; }
+    .byline .affil { font-weight: normal; font-style: italic; color: #486581; }
+
+    .talk-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 16px;
+      margin-top: 14px;
+    }
+    .talk-actions .button { position: relative; margin: 0; padding: 7px 16px; font-size: 0.92em; }
+    .file-meta { font-size: 0.85em; color: #486581; }
+
+    /* ---- Supplementary video ---- */
+    details.talk-media {
+      margin-top: 14px;
+      border-top: 1px solid #e3ebf3;
+      padding-top: 12px;
+    }
+    details.talk-media summary { cursor: pointer; font-weight: bold; color: #102a43; font-size: 0.95em; }
+    details.talk-media video {
+      display: block;
+      width: 100%;
+      max-width: 794px;
+      height: auto;
+      margin-top: 12px;
+      background: #000;
+      border-radius: 4px;
+    }
+    .media-caption { margin: 8px 0 0; font-size: 0.88em; color: #486581; }
+
+    .back-to-top {
+      display: block;
+      text-align: right;
+      font-size: 0.85em;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .page-header { padding: 20px; }
+      .page-header .button { display: block; margin: 0 0 10px; text-align: center; }
+      /* The site nav stacks to about 304px here and stays sticky; land jump targets below it */
+      .day, .talk { scroll-margin-top: 320px; }
+    }
+    @media (max-width: 640px) {
+      .talk { grid-template-columns: minmax(0, 1fr); padding: 16px; }
+      .talk-thumb { max-width: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <img src="../../../images/Logo.png" alt="MOOCTA Logo" class="logo">
+  <p>Mathematical Optimization and Optimal Control Theory and Applications (MOOCTA)</p>
+</header>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="nav-item"><a href="../../../index.html">Home</a></div>
+    <div class="nav-item"><a href="../../../about.html">About</a></div>
+    <div class="nav-item"><a href="../../../members.html">Members</a></div>
+    <div class="nav-item">
+      <a href="#">Activities ▾</a>
+      <div class="dropdown">
+        <div class="nav-sub-item">
+          <a href="../workshop2026.html">Workshop 2026 ▸</a>
+          <div class="sub-dropdown">
+            <a href="../workshop2026.html">Overview</a>
+            <a href="programme.html">Programme</a>
+            <a href="abstracts.html">Abstracts</a>
+            <a href="presentations.html">Presentations</a>
+            <a href="participants.html">Participants</a>
+            <a href="venue.html">Venue</a>
+          </div>
+        </div>
+        <a href="../../research.html">Research</a>
+        <a href="../../seminars.html">Seminars</a>
+        <a href="../../retreats.html">Retreats</a>
+        <a href="../../projects.html">Projects</a>
+      </div>
+    </div>
+    <div class="nav-item"><a href="../../../news.html">News</a></div>
+    <div class="nav-item"><a href="../../../contact.html">Contact</a></div>
+  </div>
+</nav>
+
+<main>
+
+<!--
+  Adding a presentation:
+  1. Save the slides as PDF in slides/, named <surname>-moocta-2026.pdf. Export PowerPoint files to PDF
+     (File > Export > Create PDF/XPS Document) instead of publishing the .pptx: a .pptx keeps its speaker notes.
+  2. Add a 480x270 (or 360x270 for 4:3 slides) JPEG of the title slide as slides/thumbnails/<surname>.jpg.
+  3. Copy an <article class="talk"> block below, reusing the talk's id from abstracts.html; update the type
+     label and t-* class, time, title, byline, the speaker name in the hidden link text, the thumbnail
+     width/height and the "PDF, size" label.
+  4. Update that day's count in the day cards at the top of this page.
+  5. Add matching "Slides" links on programme.html and abstracts.html (with the same "PDF, size" label on
+     abstracts.html).
+  slides/p.avi is linked from slide 15 of banda-moocta-2026.pdf by that exact name; do not rename it.
+-->
+
+<div class="page-header">
+  <h1>Presentations</h1>
+  <p class="meta">Slides from keynote, plenary, industry and contributed talks at the workshop, 7 &ndash; 10 September 2026, The Manhattan Hotel, Pretoria.</p>
+  <a class="button" href="programme.html">Programme</a>
+  <a class="button" href="abstracts.html">Titles &amp; Abstracts</a>
+  <a class="button" href="../../../MOOCTA-2026-Booklet.pdf" download="MOOCTA_2026_Workshop_Booklet.pdf">Workshop Booklet (PDF)</a>
+  <p class="note" style="margin-top: 18px; margin-bottom: 0;">Slides are published as provided by the speakers, and copyright remains with the authors. Slides are not available for every session. Each presentation opens as a PDF in a new tab.</p>
+</div>
+
+<section class="day-index" aria-label="Presentations by day">
+  <a href="#monday"><span class="day-name">Monday</span> <span class="day-date">7 September</span> <span class="day-count">8 presentations</span></a>
+  <a href="#tuesday"><span class="day-name">Tuesday</span> <span class="day-date">8 September</span> <span class="day-count">7 presentations</span></a>
+  <a href="#wednesday"><span class="day-name">Wednesday</span> <span class="day-date">9 September</span> <span class="day-count">4 presentations</span></a>
+  <a href="#thursday"><span class="day-name">Thursday</span> <span class="day-date">10 September</span> <span class="day-count">5 presentations</span></a>
+</section>
+
+<section class="day" id="monday">
+  <h2>Monday 7 September</h2>
+
+  <article class="talk t-invited" id="keynote-moshokoa">
+    <a class="talk-thumb" href="slides/moshokoa-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/moshokoa.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Keynote</span> 09:45 &ndash; 10:30</p>
+      <h3>Ordered Best Proximity Pairs for Asymptotic Pointwise Noncyclic Contractions with Applications to Volterra and Matrix Equations</h3>
+      <p class="byline">Prof. Seithuti Moshokoa <span class="affil">&middot; Tshwane University of Technology, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/moshokoa-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Prof. Seithuti Moshokoa (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 516&nbsp;KB</span>
+        <a href="abstracts.html#keynote-moshokoa">Abstract<span class="visually-hidden"> for Prof. Seithuti Moshokoa</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-chibueze-okeke">
+    <a class="talk-thumb" href="slides/okeke-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/okeke.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 11:00 &ndash; 11:30</p>
+      <h3>A Strongly Convergent Inertial Reflected-Forward-Backward Algorithm for Monotone Inclusion Problems with Applications</h3>
+      <p class="byline">Chibueze Okeke <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/okeke-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Chibueze Okeke (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 318&nbsp;KB</span>
+        <a href="abstracts.html#talk-chibueze-okeke">Abstract<span class="visually-hidden"> for Chibueze Okeke</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-chidi-nwakpa">
+    <a class="talk-thumb" href="slides/nwakpa-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/nwakpa.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 11:30 &ndash; 11:55</p>
+      <h3>A Study of Optimization Problems in Real Hilbert Spaces from Continuous and Discrete Perspectives</h3>
+      <p class="byline">Chidi Nwakpa <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/nwakpa-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Chidi Nwakpa (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 819&nbsp;KB</span>
+        <a href="abstracts.html#talk-chidi-nwakpa">Abstract<span class="visually-hidden"> for Chidi Nwakpa</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-professor-ndlovu">
+    <a class="talk-thumb" href="slides/ndlovu-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/ndlovu.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:00 &ndash; 12:25</p>
+      <h3>A Riemannian Gradient Method with Inertial Term, Adaptive Step-Size for Optimization on Manifolds and its Applications</h3>
+      <p class="byline">Professor Ndlovu <span class="affil">&middot; Sefako Makgatho Health Sciences University, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/ndlovu-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Professor Ndlovu (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 654&nbsp;KB</span>
+        <a href="abstracts.html#talk-professor-ndlovu">Abstract<span class="visually-hidden"> for Professor Ndlovu</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-koketso-malebana">
+    <a class="talk-thumb" href="slides/malebana-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/malebana.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:25 &ndash; 12:50</p>
+      <h3>Some Recent Advances by Iteration for Non-smooth Convex Minimization Problems</h3>
+      <p class="byline">Koketso Malebana <span class="affil">&middot; Sefako Makgatho Health Sciences University, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/malebana-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Koketso Malebana (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 327&nbsp;KB</span>
+        <a href="abstracts.html#talk-koketso-malebana">Abstract<span class="visually-hidden"> for Koketso Malebana</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-kazeem-aremu">
+    <a class="talk-thumb" href="slides/aremu-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/aremu.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:50 &ndash; 13:15</p>
+      <h3>A Derivative-Free Optimization Method on Hadamard Manifold for Solving Nonlinear Monotone Systems with Application in Image Deblurring</h3>
+      <p class="byline">Kazeem Aremu <span class="affil">&middot; Sefako Makgatho Health Sciences University, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/aremu-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Kazeem Aremu (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 705&nbsp;KB</span>
+        <a href="abstracts.html#talk-kazeem-aremu">Abstract<span class="visually-hidden"> for Kazeem Aremu</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-invited" id="plenary-banda">
+    <a class="talk-thumb" href="slides/banda-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/banda.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Plenary talk</span> 14:15 &ndash; 15:00</p>
+      <h3>How to Control Hyperbolic Systems of First-order Equations</h3>
+      <p class="byline">Prof. Mapundi Banda <span class="affil">&middot; University of Pretoria, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/banda-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Prof. Mapundi Banda (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 8.0&nbsp;MB</span>
+        <a href="abstracts.html#plenary-banda">Abstract<span class="visually-hidden"> for Prof. Mapundi Banda</span></a>
+      </div>
+      <details class="talk-media">
+        <summary>Animation shown on slide 15</summary>
+        <video controls preload="none" playsinline width="794" height="330" poster="slides/banda-moocta-2026-animation.jpg"
+               aria-label="Animation: pressure in a network of five pipes" aria-describedby="banda-animation-caption">
+          <source src="slides/banda-moocta-2026-animation.mp4" type="video/mp4">
+          <source src="slides/banda-moocta-2026-animation.webm" type="video/webm">
+          <p>Your browser cannot play this video. <a href="slides/banda-moocta-2026-animation.mp4">Download the animation (MP4)</a>.</p>
+        </video>
+        <p class="media-caption" id="banda-animation-caption">Pressure in a network of five pipes joined at two T-junctions (the set-up on slide 14). Colour-coded pulses, red and yellow in the left vertical pipe and dark blue in the right one, travel into the horizontal pipe, split at the junctions and spread through the network. The animation has no sound. It is linked from slide 15 of the PDF, but most browsers cannot play it from there.</p>
+      </details>
+    </div>
+  </article>
+
+  <article class="talk t-invited" id="plenary-jolaoso">
+    <a class="talk-thumb" href="slides/jolaoso-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/jolaoso.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Plenary talk</span> 15:15 &ndash; 16:15</p>
+      <h3>Optimization for Machine Learning: From Gradient Descent to Backpropagation</h3>
+      <p class="byline">Dr Lateef Jolaoso <span class="affil">&middot; University of Hertfordshire, UK</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/jolaoso-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Dr Lateef Jolaoso (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 558&nbsp;KB</span>
+        <a href="abstracts.html#plenary-jolaoso">Abstract<span class="visually-hidden"> for Dr Lateef Jolaoso</span></a>
+      </div>
+    </div>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+<section class="day" id="tuesday">
+  <h2>Tuesday 8 September</h2>
+
+  <article class="talk t-contributed" id="talk-talat-nazir">
+    <a class="talk-thumb" href="slides/nazir-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/nazir.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 11:00 &ndash; 11:30</p>
+      <h3>Optimization Methods for Solving Problems of Machine Learning</h3>
+      <p class="byline">Talat Nazir <span class="affil">&middot; University of South Africa, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/nazir-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Talat Nazir (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 1.1&nbsp;MB</span>
+        <a href="abstracts.html#talk-talat-nazir">Abstract<span class="visually-hidden"> for Talat Nazir</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-mohamed-elfadul">
+    <a class="talk-thumb" href="slides/elfadul-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/elfadul.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 11:30 &ndash; 11:55</p>
+      <h3>A Stability-Based Approach for Adaptive Batch Sizing in Stochastic Gradient Descent</h3>
+      <p class="byline">Mohamed Elfadul <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/elfadul-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Mohamed Elfadul (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 667&nbsp;KB</span>
+        <a href="abstracts.html#talk-mohamed-elfadul">Abstract<span class="visually-hidden"> for Mohamed Elfadul</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-nneka-umeorah">
+    <a class="talk-thumb" href="slides/umeorah-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/umeorah.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:00 &ndash; 12:25</p>
+      <h3>Neural PDE Methods for Financial Free-Boundary Problems</h3>
+      <p class="byline">Nneka Umeorah <span class="affil">&middot; Cardiff University, Wales</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/umeorah-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Nneka Umeorah (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 2.7&nbsp;MB</span>
+        <a href="abstracts.html#talk-nneka-umeorah">Abstract<span class="visually-hidden"> for Nneka Umeorah</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-anesu-pisira">
+    <a class="talk-thumb" href="slides/pisira-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/pisira.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:25 &ndash; 12:50</p>
+      <h3>Persistent Learning-Optimization Integration: A HyGQAP Framework for the Quadratic Assignment Problem with Applications to Warehouse Logistics</h3>
+      <p class="byline">Anesu Pisira <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/pisira-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Anesu Pisira (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 502&nbsp;KB</span>
+        <a href="abstracts.html#talk-anesu-pisira">Abstract<span class="visually-hidden"> for Anesu Pisira</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-maryam-iqbal">
+    <a class="talk-thumb" href="slides/iqbal-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/iqbal.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:50 &ndash; 13:15</p>
+      <h3>PDE-Constrained Optimization in Dynamic Systems: Theory and Environmental Applications</h3>
+      <p class="byline">Maryam Iqbal <span class="affil">&middot; University of Johannesburg, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/iqbal-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Maryam Iqbal (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 149&nbsp;KB</span>
+        <a href="abstracts.html#talk-maryam-iqbal">Abstract<span class="visually-hidden"> for Maryam Iqbal</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-invited" id="plenary-migorski">
+    <a class="talk-thumb" href="slides/migorski-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/migorski.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Plenary talk</span> 14:15 &ndash; 15:00</p>
+      <h3>A Hemivariational Inequality Approach to the Navier-Stokes-Darcy Model</h3>
+      <p class="byline">Prof. Stanisław Migórski <span class="affil">&middot; Jagiellonian University in Krakow, Poland</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/migorski-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Prof. Stanisław Migórski (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 488&nbsp;KB</span>
+        <a href="abstracts.html#plenary-migorski">Abstract<span class="visually-hidden"> for Prof. Stanisław Migórski</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-industry" id="industry-dance">
+    <a class="talk-thumb" href="slides/higginson-brooks-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/higginson-brooks.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Industry talk</span> 15:15 &ndash; 16:15</p>
+      <h3>Applications of Data Analytics, Modelling and Control to Solve Industrial Problems</h3>
+      <p class="byline">Antony Higginson and Kevin Brooks <span class="affil">&middot; DANCE &ndash; Data Analytics, Numerics and Control Engineering, University of the Witwatersrand, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/higginson-brooks-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Antony Higginson and Kevin Brooks (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 2.6&nbsp;MB</span>
+        <a href="abstracts.html#industry-dance">Abstract<span class="visually-hidden"> for Antony Higginson and Kevin Brooks</span></a>
+      </div>
+    </div>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+<section class="day" id="wednesday">
+  <h2>Wednesday 9 September</h2>
+
+  <article class="talk t-contributed" id="talk-ciara-losel">
+    <a class="talk-thumb" href="slides/losel-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/losel.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 11:30 &ndash; 11:55</p>
+      <h3>Optimising Charging Infrastructure for Electric Freight: A Combinatorial Optimisation Approach with Application to Namibia</h3>
+      <p class="byline">Ciara Losel <span class="affil">&middot; Heriot-Watt University, Scotland</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/losel-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Ciara Losel (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 639&nbsp;KB</span>
+        <a href="abstracts.html#talk-ciara-losel">Abstract<span class="visually-hidden"> for Ciara Losel</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-bernard-adjei">
+    <a class="talk-thumb" href="slides/adjei-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/adjei.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:00 &ndash; 12:25</p>
+      <h3>A Validated Heuristic Approach for a Mixed-Fleet Routing Problem with Time Window and Optimal Location of Multiple Charging Stations</h3>
+      <p class="byline">Bernard Adjei <span class="affil">&middot; University of Energy and Natural Resources, Ghana</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/adjei-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Bernard Adjei (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 14.4&nbsp;MB</span>
+        <a href="abstracts.html#talk-bernard-adjei">Abstract<span class="visually-hidden"> for Bernard Adjei</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-jean-menjanahary">
+    <a class="talk-thumb" href="slides/menjanahary-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/menjanahary.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:25 &ndash; 12:50</p>
+      <h3>Time-Dependent Optimization for Shortest Path Routing Under Peak-Hour Congestion in Antananarivo</h3>
+      <p class="byline">Jean Menjanahary <span class="affil">&middot; University of Antananarivo, Madagascar</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/menjanahary-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Jean Menjanahary (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 1.8&nbsp;MB</span>
+        <a href="abstracts.html#talk-jean-menjanahary">Abstract<span class="visually-hidden"> for Jean Menjanahary</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-ali-haroon">
+    <a class="talk-thumb" href="slides/haroon-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/haroon.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:50 &ndash; 13:15</p>
+      <h3>Dynamic Bilevel Optimization for Carbon Emission Reduction</h3>
+      <p class="byline">Ali Haroon <span class="affil">&middot; University of KwaZulu-Natal, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/haroon-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Ali Haroon (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 2.0&nbsp;MB</span>
+        <a href="abstracts.html#talk-ali-haroon">Abstract<span class="visually-hidden"> for Ali Haroon</span></a>
+      </div>
+    </div>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+<section class="day" id="thursday">
+  <h2>Thursday 10 September</h2>
+
+  <article class="talk t-contributed" id="talk-winfrida-mwigilwa">
+    <a class="talk-thumb" href="slides/mwigilwa-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/mwigilwa.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 11:00 &ndash; 11:30</p>
+      <h3>Legendre Transform Dual Asymptotic Solution for Insurers Under the Heston Local-Stochastic Volatility Model: A Comparison of Variance Premium and Expected Value Principle</h3>
+      <p class="byline">Winfrida Mwigilwa <span class="affil">&middot; Ardhi University, Tanzania</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/mwigilwa-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Winfrida Mwigilwa (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 308&nbsp;KB</span>
+        <a href="abstracts.html#talk-winfrida-mwigilwa">Abstract<span class="visually-hidden"> for Winfrida Mwigilwa</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-keneth-motjeane">
+    <a class="talk-thumb" href="slides/motjeane-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/motjeane.jpg" alt="" width="360" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 11:30 &ndash; 11:55</p>
+      <h3>A Double Obstacle Formulation for Optimal Portfolio Selection with Transaction Costs</h3>
+      <p class="byline">Keneth Motjeane <span class="affil">&middot; University of the Witwatersrand, South Africa</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/motjeane-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Keneth Motjeane (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 420&nbsp;KB</span>
+        <a href="abstracts.html#talk-keneth-motjeane">Abstract<span class="visually-hidden"> for Keneth Motjeane</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-francis-nwawuru">
+    <a class="talk-thumb" href="slides/nwawuru-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/nwawuru.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:00 &ndash; 12:25</p>
+      <h3>A Single-Projection Proximal Algorithm for Stochastic Mixed Variational Inequalities with Applications to Breast Cancer Screening</h3>
+      <p class="byline">Francis Nwawuru <span class="affil">&middot; Chukwuemeka Odumegwu Ojukwu University, Nigeria</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/nwawuru-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Francis Nwawuru (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 633&nbsp;KB</span>
+        <a href="abstracts.html#talk-francis-nwawuru">Abstract<span class="visually-hidden"> for Francis Nwawuru</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-ndapandula-hamupolo">
+    <a class="talk-thumb" href="slides/hamupolo-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/hamupolo.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:25 &ndash; 12:50</p>
+      <h3>Robust Portfolio Optimisation for Uncertain Investment Variables</h3>
+      <p class="byline">Ndapandula Hamupolo <span class="affil">&middot; Namibia University of Science and Technology, Namibia</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/hamupolo-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Ndapandula Hamupolo (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 3.2&nbsp;MB</span>
+        <a href="abstracts.html#talk-ndapandula-hamupolo">Abstract<span class="visually-hidden"> for Ndapandula Hamupolo</span></a>
+      </div>
+    </div>
+  </article>
+
+  <article class="talk t-contributed" id="talk-timothy-bisakaya">
+    <a class="talk-thumb" href="slides/bisakaya-moocta-2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <img src="slides/thumbnails/bisakaya.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+    </a>
+    <div class="talk-body">
+      <p class="talk-meta"><span class="talk-type">Contributed talk</span> 12:50 &ndash; 13:15</p>
+      <h3>Optimizing Digital Credit, Risk Modelling, and Inclusive Finance Under Uncertainty</h3>
+      <p class="byline">Timothy Bisakaya <span class="affil">&middot; The Co-operative University of Kenya, Kenya</span></p>
+      <div class="talk-actions">
+        <a class="button" href="slides/bisakaya-moocta-2026.pdf" target="_blank" rel="noopener">View Slides<span class="visually-hidden"> for Timothy Bisakaya (PDF, opens in a new tab)</span></a>
+        <span class="file-meta">PDF, 741&nbsp;KB</span>
+        <a href="abstracts.html#talk-timothy-bisakaya">Abstract<span class="visually-hidden"> for Timothy Bisakaya</span></a>
+      </div>
+    </div>
+  </article>
+  <a class="back-to-top" href="#top">Back to top &uarr;</a>
+</section>
+
+</main>
+
+<footer>
+  © 2026 MOOCTA Research Group
+</footer>
+
+</body>
+</html>

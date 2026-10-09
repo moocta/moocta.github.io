@@ -167,6 +167,17 @@ footer {
   margin-bottom: 25px;
 }
 
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 20px;
+}
+
+.cta-buttons .button {
+  margin: 0;
+}
+
 .button {
   display: inline-block;
   background: #102a43;
@@ -212,6 +223,57 @@ footer {
   margin-bottom: 5px;
 }
 
+/* Text for screen readers only */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Presentation slide links (programme and abstracts pages).
+   position: relative keeps the visually hidden text inside the link, so it cannot
+   escape the programme table's scroll container and widen the page on phones. */
+.slides-link {
+  position: relative;
+  display: inline-block;
+  padding: 1px 10px;
+  border: 1px solid #9fb3c8;
+  border-radius: 999px;
+  background: white;
+  font-size: 0.82em;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+main a.slides-link:hover {
+  background: #0b3d91;
+  border-color: #0b3d91;
+  color: white;
+}
+
+@supports ((mask-repeat: no-repeat) or (-webkit-mask-repeat: no-repeat)) {
+  .slides-link::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+    vertical-align: -0.15em;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1 1.5h14V3H1zM2 3h12v7.5H2zm1.2 1.2v5.1h9.6V4.2zM7.4 10.5h1.2v2H7.4zM5 12.5h6v1.2H5z'/%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1 1.5h14V3H1zM2 3h12v7.5H2zm1.2 1.2v5.1h9.6V4.2zM7.4 10.5h1.2v2H7.4zM5 12.5h6v1.2H5z'/%3E%3C/svg%3E") no-repeat center / contain;
+  }
+}
+
 @media (max-width: 768px) {
   /* Stack navigation vertically */
   .nav-wrap {
@@ -251,6 +313,11 @@ footer {
   /* Reduce main padding */
   main {
     padding: 20px;
+  }
+
+  /* Full-width hero buttons */
+  .cta-buttons {
+    flex-direction: column;
   }
 
   /* Center header content */
